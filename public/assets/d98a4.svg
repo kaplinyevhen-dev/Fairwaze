@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="772.076" height="576.416" viewBox="0 0 772.076 576.416" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Ellipse 41844" opacity="0.04" filter="url(#filter0_f_0_19)" style="mix-blend-mode:plus-lighter">
+<use xlink:href="#stroke0_0_19" fill="#079455"/>
+<mask id="stroke1_0_19" fill="white">
+<use xlink:href="#stroke0_0_19"/>
+</mask>
+<path d="M586.036 288.208C586.036 344.634 496.494 390.376 386.038 390.376C275.582 390.376 186.039 344.634 186.039 288.208C186.039 231.782 275.582 186.039 386.038 186.039C496.494 186.039 586.036 231.782 586.036 288.208Z" stroke-width="1.43107" stroke="#079455" mask="url(#stroke1_0_19)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_19" x="0" y="0" width="772.076" height="576.416" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="93.0197" result="effect1_foregroundBlur_0_19"/>
+</filter>
+<path id="stroke0_0_19" d="M586.036 288.208C586.036 344.634 496.494 390.376 386.038 390.376C275.582 390.376 186.039 344.634 186.039 288.208C186.039 231.782 275.582 186.039 386.038 186.039C496.494 186.039 586.036 231.782 586.036 288.208Z"/>
+</defs>
+</svg>

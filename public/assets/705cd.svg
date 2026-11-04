@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="223.247" height="98.7439" viewBox="0 0 223.247 98.7439" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group">
+<mask id="mask0_0_11" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="42" y="0" width="139" height="96">
+<ellipse id="Ellipse 41845" cx="111.624" cy="47.9409" rx="68.6915" ry="47.9409" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_11)">
+<g id="Container">
+<path id="Vector 1481" d="M7.15532 45.7942H213.23" stroke-width="0.715536" stroke-linecap="round" stroke-linejoin="round" stroke="#079455"/>
+<rect id="Mask" x="-2.8621" y="45.7943" width="228.972" height="52.9497" fill="url(#paint0_linear_0_11)"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_11" x1="111.624" y1="45.7943" x2="111.624" y2="98.7439" gradientUnits="userSpaceOnUse">
+<stop stop-color="#079455" stop-opacity="0.2"/>
+<stop offset="1" stop-color="#079455" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
