@@ -42,7 +42,7 @@ export default function Section236_26() {
         <div className="content-stretch flex flex-col gap-[40px] items-center justify-center relative shrink-0 w-[1013px]" data-node-id="212:52" data-name="Hero Content">
           <div className="content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0 w-full" data-node-id="212:53" data-name="Hero Texts">
             <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="212:54" data-name="Subheading Container">
-              <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] text-center tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:55" style={{ backgroundImage: "linear-gradient(94.97929595172981deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+              <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] text-center tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:55" style={{ backgroundImage: "linear-gradient(94.97929595172981deg, #FFE100 0%, #35BC34 0%, #00C2CC 50%, #08AA89 69%, #0897BF 100%)" }}>
                 <p className="leading-[normal]">All-in-one venue platform</p>
               </div>
             </div>
