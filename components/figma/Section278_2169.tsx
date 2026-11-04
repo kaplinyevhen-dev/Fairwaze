@@ -78,7 +78,7 @@ export default function Section278_2169() {
       <div className="content-stretch flex flex-col gap-[32px] items-center justify-center relative shrink-0 w-[343px]" data-node-id="278:2199" data-name="Hero Content">
         <div className="content-stretch flex flex-col gap-[12px] items-center justify-center relative shrink-0 w-[335px]" data-node-id="278:2200" data-name="Hero Texts">
           <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="278:2201" data-name="Subheading Container">
-            <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center uppercase whitespace-nowrap" data-node-id="278:2202" style={{ backgroundImage: "linear-gradient(94.91323250453897deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+            <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center uppercase whitespace-nowrap" data-node-id="278:2202" style={{ backgroundImage: "linear-gradient(94.91323250453897deg, #FFE100 0%, #35BC34 0%, #00C2CC 50%, #08AA89 69%, #0897BF 100%)" }}>
               <p className="leading-[normal]">All-in-one venue platform</p>
             </div>
           </div>
