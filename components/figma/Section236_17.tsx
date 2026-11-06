@@ -7,14 +7,14 @@ export default function Section236_17() {
   return (
     <div className="content-stretch flex flex-col gap-[64px] items-center justify-center py-[80px] relative size-full" data-node-id="236:17" data-name="Container">
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] items-center relative shrink-0 text-center w-[1214px]" data-node-id="212:590" data-name="Heading Container">
-        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:591" style={{ backgroundImage: "linear-gradient(92.37255418352169deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%), linear-gradient(91.98081194384712deg, rgb(189, 167, 0) 54.913%, rgb(127, 193, 21) 7.8911%, rgb(53, 188, 52) 22.693%, rgb(7, 181, 104) 56.78%, rgb(8, 170, 137) 99.485%, rgb(8, 151, 191) 168.47%)" }}>
+        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:591" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">testimonials</p>
         </div>
         <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[52px] text-[color:var(--text\/primary,#262626)] tracking-[-1.56px] w-[min-content]" data-node-id="212:592">
           What our clients say
         </h2>
       </div>
-      <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-[2812px]" data-node-id="212:1199" data-name="Testimonial Carousel">
+      <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-[2812px]" data-node-id="212:1199" data-name="Testimonial Carousel" role="region" aria-label="Client testimonials" tabIndex={0}>
         <div className="bg-[var(--background\/white,white)] border border-[var(--border\/subtle,#ebebeb)] border-solid content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[16px] relative rounded-[40px] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.06)] shrink-0 w-[916px]" data-node-id="212:1177" data-name="Feature Item">
           <div className="bg-[var(--background\/light-gray,#f5f5f5)] h-[361px] overflow-clip relative rounded-[24px] shrink-0 w-full" data-node-id="212:1178" data-name="Feature Image">
             <div className="absolute contents left-[31.5px] top-[32px]" data-node-id="212:1179" data-name="Testimonial Section">

@@ -26,7 +26,7 @@ export default function Section278_3280() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start px-[16px] py-[40px] relative size-full" data-node-id="278:3280" data-name="Main Features Section">
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center relative shrink-0 text-center w-full" data-node-id="278:3281" data-name="Main Features Section">
-        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3282" style={{ backgroundImage: "linear-gradient(94.6488494494133deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3282" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">Suit your business needs</p>
         </div>
         <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[36px] text-[color:var(--text\/primary,#262626)] tracking-[-1.08px] w-[min-content]" data-node-id="278:3283">
@@ -97,23 +97,23 @@ export default function Section278_3280() {
             <div className="absolute contents left-[-247px] top-[71px]" data-node-id="278:3298" data-name="Container">
               <div className="absolute content-stretch flex gap-[14.418px] h-[48.443px] items-center left-[-153.99px] top-[133.86px] w-[700.981px]" data-node-id="278:3299" data-name="Container">
                 <div className="bg-[var(--background\/white,white)] content-stretch drop-shadow-[0px_2.884px_2.884px_rgba(36,66,52,0.1)] flex gap-[9.689px] items-center px-[12.111px] py-[9.689px] relative rounded-[11.534px] shrink-0 w-[224.049px]" data-node-id="278:3300" data-name="card-row">
-                  <div className="bg-[var(--surface\/teal,#098ba5)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3301" data-name="icon-container">
+                  <div className="bg-[rgba(9,139,165,0.12)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3301" data-name="icon-container">
                     <div className="relative shrink-0 size-[14.533px]" data-node-id="278:3302" data-name="clock-plus">
                       <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClockPlus} />
                     </div>
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3304" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3305" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3306">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3306">
                         Simone Adeyemi
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3307">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3307">
                         3 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3308">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3308">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking extended by `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
                     </p>
                   </div>
                 </div>
@@ -125,16 +125,16 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3313" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3314" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3315">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3315">
                         Ingrid Sorensen
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3316">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3316">
                         2 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3317">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3317">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking purchased for `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$27.12</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$27.12</span>
                     </p>
                   </div>
                 </div>
@@ -146,39 +146,39 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3322" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3323" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3324">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3324">
                         Simone Adeyemi
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3325">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3325">
                         3 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3326">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3326">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking extended by `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
                     </p>
                   </div>
                 </div>
               </div>
               <div className="absolute content-stretch flex gap-[14.418px] h-[48.443px] items-center left-[-247px] top-[71px] w-[700.981px]" data-node-id="278:3327" data-name="Container">
                 <div className="bg-[var(--background\/white,white)] content-stretch drop-shadow-[0px_2.884px_2.884px_rgba(36,66,52,0.1)] flex gap-[9.689px] items-center px-[12.111px] py-[9.689px] relative rounded-[11.534px] shrink-0 w-[224.049px]" data-node-id="278:3328" data-name="card-row">
-                  <div className="bg-[var(--surface\/teal,#098ba5)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3329" data-name="icon-container">
+                  <div className="bg-[rgba(9,139,165,0.12)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3329" data-name="icon-container">
                     <div className="relative shrink-0 size-[14.533px]" data-node-id="278:3330" data-name="clock-plus">
                       <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClockPlus2} />
                     </div>
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3332" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3333" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3334">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3334">
                         Simone Adeyemi
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3335">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3335">
                         3 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3336">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3336">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking extended by `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
                     </p>
                   </div>
                 </div>
@@ -194,16 +194,16 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3344" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3345" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3346">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3346">
                         Cole Hartman
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3347">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3347">
                         8 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[8.651px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3348">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[8.651px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3348">
                       <span className="leading-[1.4]">{`Client unlocked door in `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45]">Bay 2</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45]">Bay 2</span>
                     </p>
                   </div>
                 </div>
@@ -215,23 +215,23 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3353" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3354" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3355">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3355">
                         Yuki Tanaka
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3356">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3356">
                         2 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3357">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3357">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking purchased for `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$45.36</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$45.36</span>
                     </p>
                   </div>
                 </div>
               </div>
               <div className="absolute content-stretch flex gap-[14.418px] h-[48.443px] items-center left-[-199.41px] top-[196.72px] w-[700.981px]" data-node-id="278:3358" data-name="Container">
                 <div className="bg-[var(--background\/white,white)] content-stretch drop-shadow-[0px_2.884px_2.884px_rgba(36,66,52,0.1)] flex gap-[9.689px] items-center px-[12.111px] py-[9.689px] relative rounded-[11.534px] shrink-0 w-[224.049px]" data-node-id="278:3359" data-name="card-row">
-                  <div className="bg-[var(--surface\/teal,#098ba5)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3360" data-name="icon-container">
+                  <div className="bg-[rgba(9,139,165,0.12)] content-stretch flex items-center justify-center relative rounded-[7.266px] shrink-0 size-[29.066px]" data-node-id="278:3360" data-name="icon-container">
                     <div className="overflow-clip relative shrink-0 size-[14.533px]" data-node-id="278:3361" data-name="calendar-check">
                       <div className="absolute inset-[6.37%_14.65%_13.29%_14.65%]" data-node-id="278:3362" data-name="Icon">
                         <div className="absolute inset-[-4.45%_-5.06%_-4.46%_-5.06%]">
@@ -242,16 +242,16 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3366" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3367" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3368">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3368">
                         Yuki Tanaka
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3369">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.146px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3369">
                         8 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[8.651px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3370">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[8.651px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3370">
                       <span className="leading-[1.4]">{`Client unlocked door in `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45]">Bay 2</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45]">Bay 2</span>
                     </p>
                   </div>
                 </div>
@@ -263,16 +263,16 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3375" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3376" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3377">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3377">
                         Simone Adeyemi
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3378">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3378">
                         3 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3379">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3379">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking extended by `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">30min</span>
                     </p>
                   </div>
                 </div>
@@ -284,16 +284,16 @@ export default function Section278_3280() {
                   </div>
                   <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2.422px] items-start min-w-px not-italic relative" data-node-id="278:3384" data-name="content-stack">
                     <div className="content-stretch flex gap-[4.844px] items-baseline leading-[normal] relative shrink-0 whitespace-nowrap" data-node-id="278:3385" data-name="top-line">
-                      <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3386">
+                      <p className="font-['Inter'] font-semibold relative shrink-0 text-[9.689px] text-[color:var(--text\/ui-dark,#373c45)]" data-node-id="278:3386">
                         Owen Mackenzie
                       </p>
-                      <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3387">
+                      <p className="font-['Inter'] font-normal relative shrink-0 text-[8.478px] text-[color:var(--text\/ui-muted,#525861)]" data-node-id="278:3387">
                         6 mins ago
                       </p>
                     </div>
-                    <p className="font-['Inter:Regular'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3388">
+                    <p className="font-['Inter'] font-normal leading-[0] min-w-full relative shrink-0 text-[0px] text-[color:var(--text\/muted,#666)] w-[min-content]" data-node-id="278:3388">
                       <span className="leading-[1.4] text-[8.651px]">{`Booking refunded for `}</span>
-                      <span className="font-['Inter:Medium'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$19.37</span>
+                      <span className="font-['Inter'] font-medium leading-[1.4] text-[#373c45] text-[8.651px]">$19.37</span>
                     </p>
                   </div>
                 </div>

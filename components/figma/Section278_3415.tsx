@@ -1,6 +1,4 @@
-const imgImage = "/assets/f62d5.png";
-const imgMobileCalendar81 = "/assets/fda0e.png";
-const imgImage1 = "/assets/f4157.png";
+import { BookingCancelCard, BookingDetailsCard, BookingPhoneScreen } from "../BookingIllustration";
 const imgCheck = "/assets/b8273.svg";
 const imgEllipse41850 = "/assets/195a7.svg";
 const imgDynamicIsland = "/assets/3cd59.svg";
@@ -10,7 +8,7 @@ export default function Section278_3415() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start px-[16px] py-[40px] relative size-full" data-node-id="278:3415" data-name="Container">
       <div className="content-stretch flex flex-col gap-[12px] items-center justify-center relative shrink-0 w-full" data-node-id="278:3416" data-name="Main Features Section">
-        <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3417" style={{ backgroundImage: "linear-gradient(93.96055193629152deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+        <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3417" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">Modern, mobile first</p>
         </div>
         <div className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-semibold leading-[0] min-w-full relative shrink-0 text-[36px] text-[color:var(--text\/primary,#262626)] text-center tracking-[-1.08px] w-[min-content] whitespace-pre-wrap" data-node-id="278:3418" role="heading" aria-level={2}>
@@ -54,11 +52,7 @@ export default function Section278_3415() {
           </div>
         </div>
         <div className="absolute bg-[var(--background\/white,white)] h-[134.963px] left-[-0.08px] overflow-clip rounded-[10.708px] shadow-[0px_4.362px_8.724px_0px_rgba(36,66,52,0.09)] top-[140.23px] w-[158.084px]" data-node-id="278:3438" data-name="Container">
-          <div className="absolute h-[127.122px] left-[3.98px] mix-blend-multiply top-[4.23px] w-[147.484px]" data-node-id="278:3439" data-name="Image">
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <img alt="" className="absolute h-[241.56%] left-[-133.84%] max-w-none top-[-71.81%] w-[248.51%]" src={imgImage} />
-            </div>
-          </div>
+          <BookingCancelCard scale={0.5452} />
         </div>
         <div className="-translate-y-1/2 absolute drop-shadow-[0px_13.035px_13.035px_rgba(36,66,52,0.16)] h-[349.267px] left-[86.34px] top-[calc(50%-7.24px)] w-[169.454px]" data-node-id="278:3440" data-name="iPhone 16 Plus Light">
           <div className="absolute contents left-[-1.24px] top-0" data-node-id="278:3441" data-name="Container">
@@ -126,24 +120,7 @@ export default function Section278_3415() {
                 <div className="absolute blur-[1.45px] border-[#879194] border-[1.657px] border-solid h-[345.952px] left-0 rounded-[24.03px] top-0 w-[166.14px]" data-node-id="278:3489" data-name="screen-border" />
               </div>
               <div className="absolute h-[339.323px] left-[4.97px] overflow-clip rounded-[21.544px] top-[4.97px] w-[159.511px]" data-node-id="278:3490" data-name="screen-here">
-                <div className="absolute bg-[#dae2d3] h-[333.523px] left-0 rounded-[20.716px] top-0 w-[153.296px]" data-node-id="278:3491" data-name="screen" />
-                <div className="absolute bg-gradient-to-r from-[#067b4b] from-[4.254%] h-[339.323px] left-0 to-[#079756] to-[94.762%] top-0 via-[#078851] via-[49.933%] w-[159.511px]" data-node-id="278:3492" data-name="Wallpaper (DELETE)" />
-                <div className="absolute h-[334.086px] left-[0.12px] shadow-[0px_21.453px_42.907px_0px_rgba(0,0,0,0.25)] top-[21.58px] w-[159.363px]" data-node-id="278:3493" data-name="mobile-calendar-8 1">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <img alt="" className="absolute h-[104.27%] left-[-0.08%] max-w-none top-[-0.13%] w-[100.1%]" src={imgMobileCalendar81} />
-                  </div>
-                </div>
-                <div className="absolute bg-[var(--background\/white,white)] h-[74.872px] left-0 top-[268.49px] w-[159.511px]" data-node-id="278:3494" data-name="Rectangle" />
-                <div className="absolute h-[240.884px] left-0 top-[45.99px] w-[159.462px]" data-node-id="278:3495" data-name="Image">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <img alt="" className="absolute h-[136.1%] left-[-18.68%] max-w-none top-[-5.57%] w-[245.38%]" src={imgImage} />
-                  </div>
-                </div>
-                <div className="absolute h-[33.058px] left-[-2.71px] top-[296.36px] w-[162.168px]" data-node-id="278:3496" data-name="Image">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <img alt="" className="absolute h-[991.74%] left-[-16.7%] max-w-none top-[-760.2%] w-[241.28%]" src={imgImage} />
-                  </div>
-                </div>
+                <BookingPhoneScreen scale={0.5452} />
                 <div className="-translate-x-1/2 absolute bg-[var(--text\/primary,#262626)] h-[2.108px] left-1/2 opacity-32 rounded-[5.269px] top-[333.12px] w-[53.921px]" data-node-id="278:3497" data-name="Line" />
               </div>
             </div>
@@ -155,7 +132,7 @@ export default function Section278_3415() {
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconsRight} />
               </div>
               <div className="absolute contents left-0 top-0" data-node-id="I278:3504;2201:183" data-name="icons-left">
-                <p className="-translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold'] leading-[9.115px] left-[7.25px] not-italic text-[7.04px] text-[color:var(--background\/white,white)] text-center top-0 tracking-[-0.8px] whitespace-nowrap" data-node-id="I278:3504;2201:184">
+                <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter'] font-semibold leading-[9.115px] left-[7.25px] not-italic text-[7.04px] text-[color:var(--background\/white,white)] text-center top-0 tracking-normal whitespace-nowrap" data-node-id="I278:3504;2201:184">
                   9:41
                 </p>
               </div>
@@ -163,11 +140,7 @@ export default function Section278_3415() {
           </div>
         </div>
         <div className="absolute bg-[var(--background\/white,white)] h-[137.533px] left-[194.3px] overflow-clip rounded-[10.254px] shadow-[-5.269px_18.97px_37.94px_0px_rgba(36,66,52,0.14)] top-[91.96px] w-[148.599px]" data-node-id="278:3506" data-name="Container">
-          <div className="absolute h-[124.947px] left-[9.35px] mix-blend-multiply top-[6.26px] w-[129.457px]" data-node-id="278:3507" data-name="Image">
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <img alt="" className="absolute h-full left-[-3.4%] max-w-none top-0 w-[106.47%]" src={imgImage1} />
-            </div>
-          </div>
+          <BookingDetailsCard scale={0.5452} />
         </div>
       </div>
     </div>

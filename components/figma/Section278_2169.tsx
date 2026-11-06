@@ -78,7 +78,7 @@ export default function Section278_2169() {
       <div className="content-stretch flex flex-col gap-[32px] items-center justify-center relative shrink-0 w-[343px]" data-node-id="278:2199" data-name="Hero Content">
         <div className="content-stretch flex flex-col gap-[12px] items-center justify-center relative shrink-0 w-[335px]" data-node-id="278:2200" data-name="Hero Texts">
           <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="278:2201" data-name="Subheading Container">
-            <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center uppercase whitespace-nowrap" data-node-id="278:2202" style={{ backgroundImage: "linear-gradient(94.91323250453897deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+            <div className="[word-break:break-word] bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] text-center uppercase whitespace-nowrap" data-node-id="278:2202" style={{ backgroundImage: "var(--section-label-gradient)" }}>
               <p className="leading-[normal]">All-in-one venue platform</p>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function Section278_2169() {
             </div>
           </div>
         </div>
-        <div className="absolute bg-gradient-to-b from-[0.997%] from-[rgba(255,255,255,0.3)] h-[1082px] left-[45px] rounded-[20px] shadow-[0px_0px_40px_0px_rgba(10,41,27,0.1),0px_40px_25px_0px_rgba(10,41,27,0.08)] to-[12.751%] to-[rgba(255,255,255,0.05)] top-[28px] w-[1320px]" data-node-id="278:2227" data-name="Background Shape" />
+        <div className="absolute hero-glass h-[1082px] left-[45px] rounded-[20px] shadow-[0px_0px_40px_0px_rgba(10,41,27,0.1),0px_40px_25px_0px_rgba(10,41,27,0.08)] to-[12.751%] to-[rgba(255,255,255,0.05)] top-[28px] w-[1320px]" data-node-id="278:2227" data-name="Background Shape" />
         <div className="-translate-x-1/2 absolute contents left-[calc(50%+227px)] top-[36px]" data-node-id="278:2228" data-name="Feature Image Container">
           <div className="-translate-x-1/2 absolute border-[#e8e9ea] border-[0.874px] border-solid h-[606.804px] left-[calc(50%+227px)] overflow-clip rounded-[12px] shadow-[0px_1.871px_3.743px_0px_rgba(0,0,0,0.2)] top-[36px] w-[723px]" data-node-id="278:2229" data-name="Callout Image">
             <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
@@ -183,84 +183,84 @@ export default function Section278_2169() {
             </div>
             <div className="absolute contents left-[60.85px] top-[217.21px]" data-node-id="278:2231" data-name="User Container">
               <div className="absolute bg-[var(--background\/blue-tint,#eff8ff)] content-stretch flex h-[9.494px] items-center justify-center left-[60.85px] p-[0.936px] top-[217.21px]" data-node-id="278:2232" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2233" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2233" style={{ fontVariationSettings: '"wdth" 100' }}>
                   James Fletcher
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[62.1px] top-[369.76px]" data-node-id="278:2234" data-name="User Container">
               <div className="absolute bg-[var(--background\/blue-tint,#eff8ff)] content-stretch flex h-[9.494px] items-center justify-center left-[62.1px] p-[0.936px] top-[369.76px]" data-node-id="278:2235" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2236" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2236" style={{ fontVariationSettings: '"wdth" 100' }}>
                   David Nakamura
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[403.06px] top-[258.92px]" data-node-id="278:2237" data-name="User Container">
               <div className="absolute bg-[var(--background\/blue-tint,#eff8ff)] content-stretch flex h-[9.494px] items-center justify-center left-[403.06px] p-[0.936px] top-[258.92px]" data-node-id="278:2238" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2239" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2239" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Finn Eriksson
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[631.28px] top-[258.95px]" data-node-id="278:2240" data-name="User Container">
               <div className="absolute bg-[var(--background\/blue-tint,#eff8ff)] content-stretch flex h-[9.494px] items-center justify-center left-[631.28px] p-[0.936px] top-[258.95px]" data-node-id="278:2241" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2242" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2242" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Connor Walsh
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[631.13px] top-[341.98px]" data-node-id="278:2243" data-name="User Container">
               <div className="absolute bg-[var(--background\/blue-tint,#eff8ff)] content-stretch flex h-[9.494px] items-center justify-center left-[631.13px] p-[0.936px] top-[341.98px]" data-node-id="278:2244" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2245" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--surface\/blue-link,#175cd2)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2245" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Carlos Mendes
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[288.99px] top-[286.54px]" data-node-id="278:2246" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[288.99px] p-[0.936px] top-[286.54px]" data-node-id="278:2247" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2248" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2248" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Isabel Correia
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[289.72px] top-[425.31px]" data-node-id="278:2252" data-name="User Container">
               <div className="absolute bg-[var(--background\/green-tint,#eafef3)] content-stretch flex h-[9.494px] items-center justify-center left-[289.72px] p-[0.936px] top-[425.31px]" data-node-id="278:2253" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--brand\/green-dark,#0b7547)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2254" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--brand\/green-dark,#0b7547)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2254" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Ethan Blackwood
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[516.86px] top-[203.33px]" data-node-id="278:2255" data-name="User Container">
               <div className="absolute bg-[var(--background\/green-tint,#eafef3)] content-stretch flex h-[9.494px] items-center justify-center left-[516.86px] p-[0.936px] top-[203.33px]" data-node-id="278:2256" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[#0b7547] text-[7.86px] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2257" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[#0b7547] text-[7.86px] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2257" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Katarina Lindqvist
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[175.13px] top-[175.66px]" data-node-id="278:2258" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[175.13px] p-[0.936px] top-[175.66px]" data-node-id="278:2259" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2260" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2260" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Tom Caldwell
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[175.55px] top-[397.54px]" data-node-id="278:2261" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[175.55px] p-[0.936px] top-[397.54px]" data-node-id="278:2262" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2263" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2263" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Elena Vasquez
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[403.03px] top-[120.13px]" data-node-id="278:2264" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[403.03px] p-[0.936px] top-[120.13px]" data-node-id="278:2265" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2266" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2266" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Camille Rousseau
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[403.14px] top-[342.05px]" data-node-id="278:2267" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[403.14px] p-[0.936px] top-[342.05px]" data-node-id="278:2268" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2269" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2269" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Ingrid Halvorsen
                 </p>
               </div>
@@ -268,14 +268,14 @@ export default function Section278_2169() {
             <div className="absolute bg-[var(--background\/white,white)] h-[15.906px] left-[4.41px] top-[93.13px] w-[31.812px]" data-node-id="278:2270" data-name="Message Square" />
             <div className="absolute contents left-[516.95px] top-[314.22px]" data-node-id="278:2273" data-name="User Container">
               <div className="absolute bg-[var(--background\/light-gray,#f5f5f5)] content-stretch flex h-[9.494px] items-center justify-center left-[516.95px] p-[0.936px] top-[314.22px]" data-node-id="278:2274" data-name="User Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Semibold'] font-[590] leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2275" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-semibold leading-[1.15] relative shrink-0 text-[7.86px] text-[color:var(--text\/ui-label,#414651)] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2275" style={{ fontVariationSettings: '"wdth" 100' }}>
                   Kenji Watanabe
                 </p>
               </div>
             </div>
             <div className="absolute contents left-[5.14px] top-[96.97px]" data-node-id="278:2276" data-name="Time Container">
               <div className="absolute bg-[var(--background\/white,white)] content-stretch flex h-[9.494px] items-center justify-center left-[5.14px] p-[0.936px] top-[96.97px]" data-node-id="278:2277" data-name="Time Inner Container">
-                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['SF_Pro:Medium'] font-[510] leading-[1.15] relative shrink-0 text-[#079455] text-[7.86px] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2278" style={{ fontVariationSettings: '"wdth" 100' }}>
+                <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter'] font-medium leading-[1.15] relative shrink-0 text-[#079455] text-[7.86px] tracking-[-0.1572px] whitespace-nowrap" data-node-id="278:2278" style={{ fontVariationSettings: '"wdth" 100' }}>
                   5:11 PM
                 </p>
               </div>

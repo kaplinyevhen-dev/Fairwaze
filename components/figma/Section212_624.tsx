@@ -1,10 +1,6 @@
-const imgImage = "/assets/5595a.png";
-const imgImage1 = "/assets/f316a.png";
 const imgGroup = "/assets/e3348.svg";
 const imgGroup1 = "/assets/07c68.svg";
-const imgVector1446 = "/assets/78643.svg";
 const imgFrame = "/assets/b43f4.svg";
-const imgGroupImage = "/assets/fe82f.svg";
 
 export default function Section212_624() {
   return (
@@ -32,15 +28,7 @@ export default function Section212_624() {
           </div>
         </div>
       </div>
-      <div className="flex h-0 items-center justify-center relative shrink-0 w-[1216px]" data-node-id="212:690">
-        <div className="flex-none rotate-90">
-          <div className="h-[1216px] relative w-0">
-            <div className="absolute inset-[0_-0.25px]">
-              <img alt="" className="block max-w-none size-full" src={imgVector1446} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="h-px bg-[#d9d9d9] relative shrink-0 w-full" data-node-id="212:690" aria-hidden="true" />
       <div className="content-stretch flex items-center justify-between leading-[0] relative shrink-0 w-full" data-node-id="212:681" data-name="Footer">
         <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="212:682" data-name="Copyright Container">
           <div className="[word-break:break-word] flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center relative shrink-0 text-[14px] text-[color:var(--text\/muted,#666)] whitespace-nowrap" data-node-id="212:683">
@@ -61,32 +49,8 @@ export default function Section212_624() {
           </div>
         </div>
       </div>
-      <div className="absolute h-[203px] left-[191.5px] top-[277px] w-[1216px]" data-node-id="236:25" data-name="Bg picture">
-        <div className="absolute contents left-0 top-0" data-node-id="212:652" data-name="Bg picture">
-          <div className="absolute contents left-[-12.86px] top-[-11.17px]" data-node-id="212:673" data-name="Background Image">
-            <div className="absolute bg-[var(--background\/yellow-tint,#f8fbdb)] h-[1053.654px] left-[-12.86px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[12.862px_11.166px] mask-size-[1216px_254.31px] opacity-50 overflow-clip top-[-11.17px] w-[1260.523px]" data-node-id="212:674" style={{ maskImage: `url("${imgGroupImage}")` }} data-name="Group Image">
-              <div className="absolute flex h-[1288.106px] items-center justify-center left-[-41.37px] top-[-60.68px] w-[1300.101px]" data-node-id="212:675">
-                <div className="-scale-y-100 flex-none">
-                  <div className="blur-[96.539px] h-[1288.106px] relative w-[1300.101px]" data-name="Image">
-                    <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage} />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute flex h-[1288.106px] items-center justify-center left-[-41.37px] top-[-60.68px] w-[1300.101px]" data-node-id="212:676">
-                <div className="-scale-y-100 flex-none">
-                  <div className="blur-[96.539px] h-[1288.106px] relative w-[1300.101px]" data-name="Image">
-                    <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage1} />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute flex h-[1627.371px] items-center justify-center left-[-593.02px] mix-blend-color top-[-259.28px] w-[2847.899px]" data-node-id="212:678">
-                <div className="flex-none rotate-180">
-                  <div className="bg-[var(--brand\/green-accent,#46c44d)] h-[1627.371px] opacity-40 relative w-[2847.899px]" data-name="Image" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="footer-wordmark absolute h-[203px] left-[191.5px] top-[277px] w-[1216px]" data-node-id="236:25" data-name="Bg picture">
+        <img alt="fairwaze" className="footer-wordmark-image" src="/assets/footer-wordmark.png" />
       </div>
     </div>
   );

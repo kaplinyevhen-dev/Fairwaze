@@ -7,7 +7,7 @@ export default function Section278_3237() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start px-[16px] py-[40px] relative size-full" data-node-id="278:3237" data-name="Main Container">
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center relative shrink-0 text-center" data-node-id="278:3238" data-name="Main Features Section">
-        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3239" style={{ backgroundImage: "linear-gradient(92.47442767060744deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3239" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">integrations</p>
         </div>
         <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[36px] text-[color:var(--text\/primary,#262626)] tracking-[-1.08px] w-[min-content]" data-node-id="278:3240">

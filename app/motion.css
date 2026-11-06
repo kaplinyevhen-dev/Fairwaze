@@ -1,0 +1,52 @@
+.motion-toggle {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 61;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  background: var(--background-white);
+  color: var(--text-muted);
+  font: 12px/1.4 "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
+}
+.motion-toggle:focus-visible { outline: 3px solid var(--brand-green-primary); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .motion-toggle { display: none; }
+  html { scroll-behavior: auto !important; }
+}
+@media (forced-colors: active), print {
+  .motion-toggle { display: none; }
+}
+
+/* Register the angle so colour follows the existing card outline continuously. */
+@property --fw-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.fw-gradient-text { background-size: 240% 100%; }
+.fw-gradient-border {
+  background: linear-gradient(#fff, #fff) padding-box,
+    conic-gradient(from var(--fw-border-angle), #ffe41a, #35bc34, #00c2cc, #08aa89, #0897bf, #ffe41a) border-box !important;
+}
+.fw-gradient-panel {
+  background-image: conic-gradient(from var(--fw-border-angle), #ffe41a, #35bc34, #00c2cc, #08aa89, #0897bf, #ffe41a) !important;
+}
+
+/* JS adds this only while the decorative illustration layers await their reveal. */
+.fw-entrance-waiting { visibility: hidden; }
+
+.fw-gradient-ring {
+  background: conic-gradient(from var(--fw-border-angle), #ffe41a, #35bc34, #00c2cc, #08aa89, #0897bf, #ffe41a);
+  -webkit-mask-image: var(--fw-ring-mask);
+  mask-image: var(--fw-ring-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
+.fw-gradient-ring > img { opacity: 0; }

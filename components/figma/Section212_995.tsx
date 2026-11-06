@@ -4,7 +4,7 @@ export default function Section212_995() {
   return (
     <div className="content-stretch flex items-center justify-center px-[10px] py-[80px] relative size-full" data-node-id="212:995" data-name="Container">
       <div className="bg-[var(--background\/white,white)] border-2 border-[#ffe41a] border-solid content-stretch flex flex-col gap-[40px] items-center overflow-clip px-[64px] py-[56px] relative rounded-[24px] shadow-[0px_24px_48px_0px_rgba(36,66,52,0.1)] shrink-0" data-node-id="212:951" data-name="Text Group">
-        <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] h-[100px] items-center relative shrink-0 text-center w-full" data-node-id="212:992" data-name="Message">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[16px] h-[100px] items-center relative shrink-0 text-center w-full" data-node-id="212:992" data-name="Message">
           <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] relative shrink-0 text-[44px] text-[color:var(--text\/primary,#262626)] tracking-[-1.32px] w-[610px]" data-node-id="212:964">
             Ready to simplify your venue?
           </h2>

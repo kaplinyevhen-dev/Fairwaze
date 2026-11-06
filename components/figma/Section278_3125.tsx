@@ -10,7 +10,6 @@ const imgImage8 = "/assets/8bf51.png";
 const imgEllipse41844 = "/assets/d98a4.svg";
 const imgEllipse41843 = "/assets/dd478.svg";
 const imgVector = "/assets/18bf0.svg";
-const imgMaskGroup = "/assets/705cd.svg";
 const imgUnion = "/assets/e23f1.svg";
 const imgVector3223 = "/assets/14777.svg";
 const imgEllipse42183 = "/assets/aa8a0.svg";
@@ -20,7 +19,7 @@ export default function Section278_3125() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start px-[16px] py-[40px] relative size-full" data-node-id="278:3125" data-name="Main Features Section">
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center relative shrink-0 text-center w-full" data-node-id="278:3126" data-name="Main Features Section">
-        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3127" style={{ backgroundImage: "linear-gradient(92.7135462557389deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%)" }}>
+        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-[transparent] tracking-[0.36px] uppercase whitespace-nowrap" data-node-id="278:3127" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">CORE FEATURES</p>
         </div>
         <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[36px] text-[color:var(--text\/primary,#262626)] tracking-[-1.08px] w-[min-content]" data-node-id="278:3128">
@@ -53,7 +52,7 @@ export default function Section278_3125() {
               </div>
             </div>
             <div className="absolute contents left-[110.61px] top-[39.87px]" data-node-id="278:3140" data-name="Container">
-              <div className="absolute h-[297.32px] left-[111.3px] rounded-[12.388px] top-[40.56px] w-[179.631px]" data-node-id="278:3141" style={{ backgroundImage: "linear-gradient(119.43079563969707deg, rgb(255, 228, 26) 6.6897%, rgb(53, 188, 52) 35.432%, rgb(0, 194, 204) 74.606%, rgb(8, 170, 137) 105.69%, rgb(8, 151, 191) 155.9%), linear-gradient(90deg, rgb(11, 130, 76) 0%, rgb(11, 130, 76) 100%)" }} data-name="Mask" />
+              <div className="device-shadow-mobile absolute h-[297.32px] left-[111.3px] rounded-[12.388px] top-[40.56px] w-[179.631px]" data-node-id="278:3141" style={{ backgroundImage: "linear-gradient(119.43079563969707deg, rgb(255, 228, 26) 6.6897%, rgb(53, 188, 52) 35.432%, rgb(0, 194, 204) 74.606%, rgb(8, 170, 137) 105.69%, rgb(8, 151, 191) 155.9%), linear-gradient(90deg, rgb(11, 130, 76) 0%, rgb(11, 130, 76) 100%)" }} data-name="Mask" />
               <div className="absolute bg-[var(--background\/white,white)] h-[261.532px] left-[112.68px] rounded-[11.012px] top-[41.93px] w-[176.878px]" data-node-id="278:3142" data-name="Container">
                 <div className="absolute h-[196.149px] left-[11.7px] mix-blend-multiply top-[12.39px] w-[153.478px]" data-node-id="278:3143" data-name="Image">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -129,19 +128,19 @@ export default function Section278_3125() {
                 </div>
               </div>
             </div>
-            <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[var(--background\/white,white)] h-[166.72px] left-[calc(50%+1.86px)] overflow-clip rounded-[14.311px] shadow-[0px_30.378px_60.756px_0px_rgba(0,0,0,0.12)] top-[calc(50%+1.36px)] w-[184.608px]" data-node-id="278:3159" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[var(--background\/white,white)] h-[166.72px] left-[calc(50%+1.86px)] overflow-hidden rounded-[14.311px] shadow-[0px_30.378px_60.756px_0px_rgba(0,0,0,0.12)] top-[calc(50%+1.36px)] w-[184.608px]" data-node-id="278:3159" data-name="Container">
               <div className="absolute inset-[50.64%_36.43%_18.45%_35.66%]" data-node-id="278:3160" data-name="Vector">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
               </div>
               <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[82.93%] font-['Inter_Display:SemiBold'] leading-[1.15] left-[calc(50%+0.13px)] not-italic text-[10.733px] text-[color:var(--text\/ui-dark,#373c45)] text-center top-[9.87%] whitespace-nowrap" data-node-id="278:3161">
                 2 minutes remaining
               </p>
-              <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[66.2%] font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%+0.36px)] not-italic text-[7.871px] text-[color:var(--text\/ui-muted,#525861)] text-center top-[20.6%] w-[149.547px]" data-node-id="278:3162">
+              <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[66.2%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%+0.36px)] not-italic text-[7.871px] text-[color:var(--text\/ui-muted,#525861)] text-center top-[20.6%] w-[149.547px]" data-node-id="278:3162">
                 Need more time? Scan the QR code to extend your session and continue playing.
               </p>
               <div className="absolute h-[95.882px] left-[23.61px] top-[64.4px] w-[137.383px]" data-node-id="278:3163" data-name="Mask group">
                 <div className="absolute inset-[0_-31.25%_-2.99%_-31.25%]">
-                  <img alt="" className="block max-w-none size-full" src={imgMaskGroup} />
+                  <div className="qr-scan-sweep qr-scan-sweep-mobile" aria-hidden="true" />
                 </div>
               </div>
               <div className="absolute h-[71.602px] left-[55.79px] top-[74.39px] w-[71.601px]" data-node-id="278:3168" data-name="Union">
@@ -166,8 +165,8 @@ export default function Section278_3125() {
               <div className="absolute bg-[var(--border\/light,#e6e6e6)] h-[264px] left-[-65.1px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[458.199px_264px] top-0 w-[458.199px]" data-node-id="278:3181" style={{ maskImage: `url("${imgImage}")` }} data-name="Image" />
             </div>
             <div className="absolute h-[264px] left-[-65.79px] mix-blend-overlay top-[-0.69px] w-[458.199px]" data-node-id="278:3182" data-name="Image" />
-            <div className="absolute contents left-[32.46px] top-[63.13px]" data-node-id="278:3183" data-name="Container">
-              <div className="absolute h-[291.887px] left-[33.15px] pointer-events-none rounded-[23.351px] top-[63.82px] w-[173.835px]" data-node-id="278:3184" data-name="Mask">
+            <div className="absolute inset-0 pointer-events-none" data-node-id="278:3183" data-name="Container">
+              <div className="device-shadow-mobile absolute h-[291.887px] left-[33.15px] pointer-events-none rounded-[23.351px] top-[63.82px] w-[173.835px]" data-node-id="278:3184" data-name="Mask">
                 <div aria-hidden className="absolute inset-0 rounded-[23.351px]" style={{ backgroundImage: "linear-gradient(141.13057668446828deg, rgba(255, 255, 255, 0.8) 2.4215%, rgba(255, 255, 255, 0.4) 75.992%)" }} />
                 <div className="absolute inset-0 rounded-[inherit] shadow-[inset_0.649px_-5.189px_1.946px_0px_rgba(0,0,0,0.22),inset_1.946px_1.946px_1.946px_0px_white]" />
               </div>
@@ -200,7 +199,7 @@ export default function Section278_3125() {
                   </div>
                 </div>
               </div>
-              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[27.76%] contents font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-44.15px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[68.43%] whitespace-nowrap" data-node-id="278:3190" style={{ containerType: "size" }} data-name="Container">
+              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[27.76%] contents font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-44.15px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[68.43%] whitespace-nowrap" data-node-id="278:3190" style={{ containerType: "size" }} data-name="Container">
                 <p className="absolute bottom-[27.76%] left-[calc(50%-108.19px)] top-[68.43%]" data-node-id="278:3191">
                   Bay Session (2hr)
                 </p>
@@ -208,7 +207,7 @@ export default function Section278_3125() {
                   $48.00
                 </p>
               </div>
-              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[20.82%] contents font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-43.68px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[75.36%] whitespace-nowrap" data-node-id="278:3193" style={{ containerType: "size" }} data-name="Container">
+              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[20.82%] contents font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-43.68px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[75.36%] whitespace-nowrap" data-node-id="278:3193" style={{ containerType: "size" }} data-name="Container">
                 <p className="absolute bottom-[20.83%] left-[calc(50%-108.19px)] top-[75.36%]" data-node-id="278:3194">
                   Session Extension (30min)
                 </p>
@@ -216,7 +215,7 @@ export default function Section278_3125() {
                   $14.00
                 </p>
               </div>
-              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[13.89%] contents font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-43.88px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[82.29%] whitespace-nowrap" data-node-id="278:3196" style={{ containerType: "size" }} data-name="Container">
+              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[13.89%] contents font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-43.88px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[82.29%] whitespace-nowrap" data-node-id="278:3196" style={{ containerType: "size" }} data-name="Container">
                 <p className="absolute bottom-[13.89%] left-[calc(50%-108.19px)] top-[82.29%]" data-node-id="278:3197">
                   Craft Beer — Hazy IPA
                 </p>
@@ -224,19 +223,19 @@ export default function Section278_3125() {
                   $9.50
                 </p>
               </div>
-              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[6.96%] contents font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-43.68px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[89.22%] whitespace-nowrap" data-node-id="278:3199" style={{ containerType: "size" }} data-name="Container">
+              <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[6.96%] contents font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-43.68px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[89.22%] whitespace-nowrap" data-node-id="278:3199" style={{ containerType: "size" }} data-name="Container">
                 <p className="absolute bottom-[6.96%] left-[calc(50%-108.19px)] top-[89.22%]" data-node-id="278:3200">{`Nachos & Salsa`}</p>
                 <p className="absolute bottom-[6.96%] left-[calc(50%-1.16px)] top-[89.22%]" data-node-id="278:3201">
                   $12.00
                 </p>
               </div>
-              <p className="[word-break:break-word] absolute bottom-[53.75%] font-['Inter_Display:SemiBold'] leading-[1.45] left-[calc(50%-52.41px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[42.43%] whitespace-nowrap" data-node-id="278:3202">
+              <p className="[word-break:break-word] absolute bottom-[53.75%] font-['Inter_Display'] font-semibold leading-[1.45] left-[calc(50%-52.41px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[42.43%] whitespace-nowrap" data-node-id="278:3202">
                 Total
               </p>
-              <p className="[word-break:break-word] absolute bottom-[38.65%] font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-86.13px)] not-italic opacity-60 text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[57.53%] whitespace-nowrap" data-node-id="278:3203">
+              <p className="[word-break:break-word] absolute bottom-[38.65%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-86.13px)] not-italic opacity-60 text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[57.53%] whitespace-nowrap" data-node-id="278:3203">
                 Tap, insert, or swipe to pay
               </p>
-              <p className="[word-break:break-word] absolute bottom-[43.42%] font-['Inter_Display:SemiBold'] leading-[1.45] left-[calc(50%-76.41px)] not-italic text-[19.459px] text-[color:var(--text\/primary,#262626)] top-[45.9%] whitespace-nowrap" data-node-id="278:3204">
+              <p className="[word-break:break-word] absolute bottom-[43.42%] font-['Inter_Display'] font-semibold leading-[1.45] left-[calc(50%-76.41px)] not-italic text-[19.459px] text-[color:var(--text\/primary,#262626)] top-[45.9%] whitespace-nowrap" data-node-id="278:3204">
                 $94.36
               </p>
               <div className="absolute left-[147.27px] size-[5.189px] top-[75.49px]" data-node-id="278:3205">
@@ -244,20 +243,20 @@ export default function Section278_3125() {
               </div>
             </div>
             <div className="absolute contents left-[160.12px] top-[33.31px]" data-node-id="278:3206" data-name="Container">
-              <div className="absolute bg-[var(--background\/white,white)] border-[#ffe41a] border-[1.297px] border-solid h-[116.954px] left-[160.81px] overflow-clip rounded-[10.378px] top-[34px] w-[133.931px]" data-node-id="278:3208" data-name="Container">
-                <p className="[word-break:break-word] absolute bottom-[80.62%] font-['Inter_Display:SemiBold'] leading-[1.15] left-[calc(50%-42.83px)] not-italic text-[9.081px] text-[color:var(--text\/ui-dark,#373c45)] top-[10.83%] whitespace-nowrap" data-node-id="278:3209">
+              <div className="absolute pos-gradient-border border-transparent border-[1.297px] border-solid h-[116.954px] left-[160.81px] overflow-clip rounded-[10.378px] top-[34px] w-[133.931px]" data-node-id="278:3208" data-name="Container">
+                <p className="[word-break:break-word] absolute bottom-[80.62%] font-['Inter_Display'] font-semibold leading-[1.15] left-[calc(50%-42.83px)] not-italic text-[9.081px] text-[color:var(--text\/ui-dark,#373c45)] top-[10.83%] whitespace-nowrap" data-node-id="278:3209">
                   Payment received
                 </p>
-                <p className="[word-break:break-word] absolute bottom-[65.06%] font-['Inter_Display:Medium'] leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[26.39%] whitespace-nowrap" data-node-id="278:3210">
+                <p className="[word-break:break-word] absolute bottom-[65.06%] font-['Inter_Display'] font-medium leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-dark,#373c45)] top-[26.39%] whitespace-nowrap" data-node-id="278:3210">
                   $94.36 · Visa •••• 4821
                 </p>
-                <p className="[word-break:break-word] absolute bottom-[52.86%] font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[38.59%] whitespace-nowrap" data-node-id="278:3211">
+                <p className="[word-break:break-word] absolute bottom-[52.86%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[38.59%] whitespace-nowrap" data-node-id="278:3211">
                   Bay 3 · June 14 · 7:30 PM
                 </p>
-                <p className="[word-break:break-word] absolute bottom-[40.65%] font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[50.79%] whitespace-nowrap" data-node-id="278:3212">
+                <p className="[word-break:break-word] absolute bottom-[40.65%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[50.79%] whitespace-nowrap" data-node-id="278:3212">
                   +94 Rewards points earned
                 </p>
-                <p className="[word-break:break-word] absolute bottom-[28.45%] font-['Inter_Display:Regular'] leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[63%] whitespace-nowrap" data-node-id="278:3213">
+                <p className="[word-break:break-word] absolute bottom-[28.45%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%-54.18px)] not-italic text-[7.135px] text-[color:var(--text\/ui-muted,#525861)] top-[63%] whitespace-nowrap" data-node-id="278:3213">
                   Synced to Fairwayze · just now
                 </p>
                 <div className="absolute left-[12.58px] size-[7.601px] top-[14.15px]" data-node-id="278:3214" data-name="Container">
@@ -265,11 +264,8 @@ export default function Section278_3125() {
                     <img alt="" className="block max-w-none size-full" src={imgContainer} />
                   </div>
                 </div>
-                <div className="absolute contents left-[12.78px] top-[93.07px]" data-node-id="278:3217" data-name="Container">
-                  <div className="absolute bg-[#079455] border-[#079455] border-[0.692px] border-solid h-[10.799px] left-[12.78px] rounded-[20.759px] top-[93.07px] w-[54.07px]" data-node-id="278:3218" data-name="Mask" />
-                  <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] absolute bottom-[13.54%] font-['Inter_Display:Medium'] leading-[1.45] left-[calc(50%-49.47px)] not-italic text-[6.228px] text-[color:var(--background\/white,white)] top-[82.19%] whitespace-nowrap" data-node-id="278:3219">
-                    Auto-confirmed
-                  </p>
+                <div className="absolute bg-[#079455] border-[#079455] border-[0.692px] border-solid flex h-[10.799px] items-center justify-center left-[12.78px] rounded-[20.759px] top-[93.07px] w-[54.07px]" data-node-id="278:3217" data-name="Container">
+                  <p className="font-['Inter_Display'] font-medium leading-none text-[6.228px] text-white whitespace-nowrap" data-node-id="278:3219">Auto-confirmed</p>
                 </div>
               </div>
             </div>

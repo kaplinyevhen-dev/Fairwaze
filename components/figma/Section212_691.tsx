@@ -7,7 +7,7 @@ export default function Section212_691() {
   return (
     <div className="content-stretch flex flex-col gap-[64px] items-center px-[192px] py-[80px] relative size-full" data-node-id="212:691" data-name="Container">
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0 text-center w-[921px]" data-node-id="212:692" data-name="Feature Texts">
-        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:693" style={{ backgroundImage: "linear-gradient(92.3947018928849deg, rgb(255, 225, 0) 48.117%, rgb(53, 188, 52) 41.155%, rgb(0, 194, 204) 124.18%, rgb(8, 170, 137) 190.06%, rgb(8, 151, 191) 296.48%), linear-gradient(91.99930925076131deg, rgb(189, 167, 0) 54.913%, rgb(127, 193, 21) 7.8911%, rgb(53, 188, 52) 22.693%, rgb(7, 181, 104) 56.78%, rgb(8, 170, 137) 99.485%, rgb(8, 151, 191) 168.47%)" }}>
+        <div className="bg-clip-text flex flex-col font-['Plus_Jakarta_Sans'] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-[transparent] tracking-[0.42px] uppercase whitespace-nowrap" data-node-id="212:693" style={{ backgroundImage: "var(--section-label-gradient)" }}>
           <p className="leading-[normal]">integrations</p>
         </div>
         <h2 className="font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] relative shrink-0 text-[52px] text-[color:var(--text\/primary,#262626)] tracking-[-1.56px] w-[921px]" data-node-id="212:694">

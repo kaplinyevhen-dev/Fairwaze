@@ -1,0 +1,212 @@
+/* Desktop and tablet layout. Mobile keeps its original Figma canvas. */
+.responsive-artwork {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  flex: none;
+}
+
+.responsive-artwork-inner {
+  position: absolute;
+  inset: 0 auto auto 0;
+  transform-origin: top left;
+}
+
+.responsive-artwork-inner > div {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .responsive-canvas {
+    --page-gutter: clamp(24px, 4vw, 64px);
+    --content-width: min(1216px, calc(100% - 2 * var(--page-gutter)));
+    --section-space: clamp(56px, 5vw, 80px);
+    --section-gap: clamp(36px, 4vw, 64px);
+    --type-hero: clamp(44px, 4.5vw, 60px);
+    --type-section: clamp(36px, 4vw, 52px);
+    --type-cta: clamp(32px, 3.4vw, 44px);
+    width: 100%;
+    height: auto;
+    overflow: clip;
+  }
+
+  .responsive-canvas > .canvas-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .responsive-canvas > .canvas-section > div {
+    height: auto;
+    min-width: 0;
+  }
+
+  .responsive-canvas :is(h1, h2) {
+    text-wrap: balance;
+  }
+
+  .responsive-canvas :is([data-node-id="236:15"], [data-node-id="212:691"], [data-node-id="212:997"]) {
+    padding: var(--section-space) 0;
+    gap: var(--section-gap);
+  }
+
+  /* Header and hero copy stay readable independently of the illustration. */
+  .responsive-canvas [data-node-id="236:27"] { gap: clamp(56px, 6vw, 88px); }
+  .responsive-canvas [data-node-id="212:17"] { width: var(--content-width); }
+  .responsive-canvas [data-node-id="242:1003"] { left: auto; right: 16px; }
+  .responsive-canvas [data-node-id="212:52"] { width: min(1013px, calc(100% - 2 * var(--page-gutter))); gap: 32px; }
+  .responsive-canvas [data-node-id="212:56"] { width: 100%; min-width: 0; line-height: 1.15; }
+  .responsive-canvas [data-node-id="212:57"] { width: min(648px, 100%); }
+  .responsive-canvas [data-node-id="212:733"] { position: relative; inset: auto; translate: none; margin-top: -18px; }
+  .responsive-canvas .hero-artwork { max-width: 1600px; }
+  .responsive-canvas [data-node-id="212:58"] > div { min-height: 44px; }
+
+  /* Client logos wrap to a second row instead of shrinking. */
+  .responsive-canvas [data-node-id="212:157"] { padding: var(--section-space) 0; gap: 40px; }
+  .responsive-canvas [data-node-id="212:158"] { width: var(--content-width); }
+  .responsive-canvas [data-node-id="212:159"] { width: var(--content-width); gap: 28px; flex-wrap: wrap; justify-content: space-between; }
+
+  /* Features: fluid cards, with only the artwork scaled proportionally. */
+  .responsive-canvas [data-node-id="212:176"] { width: var(--content-width); white-space: normal; }
+  .responsive-canvas [data-node-id="236:14"] { width: var(--content-width); gap: 24px; }
+  .responsive-canvas :is([data-node-id="212:180"], [data-node-id="212:225"]) { display: grid; grid-template-columns: 1.42fr 1fr; gap: 24px; align-items: stretch; }
+  .responsive-canvas [data-node-id="212:225"] { grid-template-columns: 1fr 1.42fr; }
+  .responsive-canvas :is([data-node-id="212:181"], [data-node-id="212:198"], [data-node-id="212:226"], [data-node-id="212:243"]) {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    border-radius: 32px;
+    padding: 28px 16px 16px;
+  }
+  .responsive-canvas .feature-artwork { margin-top: auto; overflow: hidden; border-radius: 24px; }
+  .responsive-canvas :is([data-node-id="212:184"], [data-node-id="212:201"], [data-node-id="212:229"], [data-node-id="212:246"]) { font-size: clamp(22px, 1.9vw, 24px); line-height: 1.3; }
+
+  /* Integration cards use normal flow, so descriptions can grow. */
+  .responsive-canvas [data-node-id="212:692"] { width: var(--content-width); }
+  .responsive-canvas :is([data-node-id="212:694"], [data-node-id="212:695"]) { width: 100%; }
+  .responsive-canvas [data-node-id="212:993"] { width: var(--content-width); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .responsive-canvas [data-node-id="212:993"] > div { display: flex; flex-direction: column; gap: 16px; width: auto; height: auto; min-height: 239px; padding: 28px; }
+  .responsive-canvas [data-node-id="212:993"] > div > * { position: relative; inset: auto; translate: none; }
+  .responsive-canvas [data-node-id="212:993"] > div > [data-name="Icon Container"] { order: -2; }
+  .responsive-canvas [data-node-id="212:993"] > div > p { order: -1; }
+  .responsive-canvas [data-node-id="212:993"] > div > div:not([data-name="Icon Container"]) { width: 100%; }
+
+  /* The first call to action expands with its content. */
+  .responsive-canvas [data-node-id="212:995"] { padding: var(--section-space) var(--page-gutter); }
+  .responsive-canvas [data-node-id="212:951"] { width: min(900px, 100%); padding: 56px 48px; }
+  .responsive-canvas [data-node-id="212:992"] { height: auto; }
+  .responsive-canvas :is([data-node-id="212:964"], [data-node-id="212:965"]) { width: 100%; min-width: 0; }
+
+  /* Operations artwork stays composed as in Figma. */
+  .responsive-canvas [data-node-id="212:294"] { width: var(--content-width); }
+  .responsive-canvas [data-node-id="212:996"] { width: var(--content-width); gap: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .responsive-canvas .operation-artwork { overflow: hidden; border-radius: 24px; }
+
+  /* Booking and analytics become stacked sections on smaller tablets. */
+  .responsive-canvas :is([data-node-id="236:16"], [data-node-id="236:18"]) {
+    width: var(--content-width);
+    margin-inline: auto;
+    padding: var(--section-space) 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr);
+    gap: clamp(24px, 3vw, 48px);
+  }
+  .responsive-canvas [data-node-id="236:18"] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.42fr); }
+  .responsive-canvas :is([data-node-id="212:449"], [data-node-id="212:429"], [data-node-id="212:453"], [data-node-id="212:433"]) { width: 100%; min-width: 0; }
+  .responsive-canvas [data-node-id="212:452"] { width: 100%; min-width: 0; font-size: var(--type-section); }
+  .responsive-canvas :is([data-node-id="212:452"], [data-node-id="212:432"]) { line-height: 1.2; }
+  .responsive-canvas [data-node-id="212:454"] { width: 100%; }
+  .responsive-canvas [data-node-id="212:454"] > div { max-width: 100%; }
+  .responsive-canvas [data-node-id="212:454"] > div > div:last-child { flex-shrink: 1; white-space: normal; }
+
+  /* Glass CTA: the frame follows the white card at any width. */
+  .responsive-canvas [data-node-id="212:542"] { min-height: 524px; padding: 88px var(--page-gutter); justify-content: center; align-items: center; isolation: isolate; }
+  .responsive-canvas [data-node-id="236:23"] { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+  .responsive-canvas [data-node-id="236:21"] { position: relative; inset: auto; translate: none; width: min(783px, 100%); height: auto; }
+  .responsive-canvas [data-node-id="212:562"] { width: 100%; padding: 56px clamp(32px, 5vw, 80px); }
+  .responsive-canvas [data-node-id="236:20"] { width: 100%; }
+  .responsive-canvas [data-node-id="236:19"] { height: auto; }
+
+  /* Footer stays on the same content grid as the header. */
+  .responsive-canvas [data-node-id="212:624"] { padding: var(--section-space) 0 0; align-items: center; gap: 48px; }
+  .responsive-canvas :is([data-node-id="212:626"], [data-node-id="212:690"], [data-node-id="212:681"]) { width: var(--content-width); }
+  .responsive-canvas [data-node-id="236:25"] { position: relative; inset: auto; width: var(--content-width); height: auto; aspect-ratio: 1216 / 203; }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .responsive-canvas [data-node-id="212:159"] { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 32px; justify-items: center; }
+  .responsive-canvas [data-node-id="212:993"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .responsive-canvas [data-node-id="212:993"] > div { min-height: 226px; }
+  .responsive-canvas [data-node-id="212:996"] { grid-template-columns: 1fr; max-width: 680px; gap: 32px; }
+  .responsive-canvas :is([data-node-id="236:16"], [data-node-id="236:18"]) { grid-template-columns: 1fr; gap: 40px; }
+  .responsive-canvas :is([data-node-id="212:449"], [data-node-id="212:429"]) { max-width: 680px; margin-inline: auto; text-align: center; align-items: center; }
+  .responsive-canvas :is([data-node-id="212:450"], [data-node-id="212:430"]) { align-items: center; }
+  .responsive-canvas [data-node-id="212:449"] { order: -1; }
+  .responsive-canvas [data-node-id="212:452"] p { display: inline; }
+  .responsive-canvas [data-node-id="212:454"] { width: auto; align-items: flex-start; margin-top: 8px; }
+  .responsive-canvas :is(.booking-artwork, .analytics-artwork) { max-width: 680px; margin-inline: auto; }
+  .responsive-canvas [data-node-id="212:648"] { gap: 28px; }
+
+  /* The membership card sets the shared row height; the other illustrations
+     fit the remaining space without increasing the cards' intrinsic height. */
+  .responsive-canvas [data-node-id="236:14"] { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 1fr; align-items: stretch; }
+  .responsive-canvas :is([data-node-id="212:180"], [data-node-id="212:225"]) { display: contents; }
+  .responsive-canvas :is([data-node-id="212:181"], [data-node-id="212:243"]) { grid-column: span 7; }
+  .responsive-canvas :is([data-node-id="212:198"], [data-node-id="212:226"]) { grid-column: span 5; }
+  .responsive-canvas [data-node-id="212:181"] .feature-artwork { aspect-ratio: 663 / 382 !important; }
+  .responsive-canvas :is([data-node-id="212:198"], [data-node-id="212:226"], [data-node-id="212:243"]) { contain: size; min-height: 0; }
+  .responsive-canvas :is([data-node-id="212:198"], [data-node-id="212:226"], [data-node-id="212:243"]) .feature-artwork { flex: 1; min-height: 0; aspect-ratio: auto !important; }
+
+  .responsive-canvas .operation-artwork { aspect-ratio: 592 / 460 !important; }
+  .responsive-canvas .operation-artwork [data-name="Feature Description"] { top: auto; bottom: 96px; }
+  .responsive-canvas .operation-artwork [data-node-id="212:312"] { top: -400px; transform: scale(.8); transform-origin: center bottom; }
+  .responsive-canvas .booking-artwork { max-width: 520px; }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .responsive-canvas :is([data-node-id="212:180"], [data-node-id="212:225"]) { grid-template-columns: 1fr; }
+  .responsive-canvas [data-node-id="236:14"] { max-width: 680px; }
+  .responsive-canvas [data-node-id="236:14"] { grid-template-columns: minmax(0, 1fr); }
+  .responsive-canvas :is([data-node-id="212:181"], [data-node-id="212:198"], [data-node-id="212:226"], [data-node-id="212:243"]) { grid-column: auto; }
+  .responsive-canvas :is([data-node-id="212:181"], [data-node-id="212:198"], [data-node-id="212:226"], [data-node-id="212:243"]) { padding-top: 32px; }
+  .responsive-canvas [data-node-id="212:18"] { gap: 24px; }
+  .responsive-canvas [data-node-id="212:681"] { gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .responsive-canvas [data-node-id="212:687"] { margin-left: auto; }
+}
+
+@media (min-width: 768px) {
+  .responsive-canvas .final-cta-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .responsive-canvas [data-node-id="212:1199"]:focus-visible { outline: 2px solid var(--brand-green-primary); outline-offset: -4px; }
+}
+
+@media (min-width: 1600px) {
+  .responsive-canvas .hero-artwork { isolation: isolate; }
+  .responsive-canvas .hero-artwork [data-node-id="300:3992"] { visibility: hidden; }
+  .responsive-canvas .hero-pattern-surface {
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+  .responsive-canvas .hero-artwork::before {
+    content: "";
+    position: absolute;
+    top: 24.375%;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: url("/assets/59c1e.png") center / cover no-repeat;
+    z-index: -1;
+  }
+}

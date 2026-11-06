@@ -32,6 +32,7 @@
 :root {
   --brand-green-primary: #11b369;
   --brand-green-accent: #46c44d;
+  --brand-green-dark: #0b7547;
   --text-primary: #262626;
   --text-muted: #666666;
   --text-body-alt: #4d4d4d;
@@ -178,6 +179,39 @@ button, a {
   outline-offset: 2px;
 }
 
+/* Colour the visible Figma label beneath its transparent link control. */
+[data-node-id]:has(> .figma-hotspot--text-link) {
+  transition: color .16s ease;
+}
+[data-node-id]:has(> .figma-hotspot--text-link:is(:hover, :focus-visible)) {
+  color: var(--brand-green-dark);
+}
+.figma-hotspot--text-link:hover { background: transparent; }
+.figma-hotspot--text-link:focus-visible { outline-color: var(--brand-green-dark); }
+
+/* Move the icon by 4px: its 12px gap becomes 16px without resizing the CTA
+   or shifting its label. The original 20px right inset becomes 16px. */
+[data-node-id]:has(> .figma-hotspot--primary) {
+  transition: background-color .18s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+[data-node-id]:has(> .figma-hotspot--primary) > p + div {
+  transition: translate .18s ease;
+}
+[data-node-id]:has(> .figma-hotspot--primary:is(:hover, :focus-visible)) {
+  background-color: #373c45;
+}
+[data-node-id]:has(> .figma-hotspot--primary:is(:hover, :focus-visible)) > p + div {
+  translate: 4px 0;
+}
+.figma-hotspot--primary:hover { background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  [data-node-id]:has(> .figma-hotspot--text-link) { transition: none; }
+  [data-node-id]:has(> .figma-hotspot--primary),
+  [data-node-id]:has(> .figma-hotspot--primary) > p + div { transition: none; }
+}
+
 .destination-dialog {
   width: min(420px, calc(100vw - 32px));
   margin: auto;
@@ -251,4 +285,247 @@ button, a {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Shared text gradient, including the overlapping 0% stops from Figma. */
+:root {
+  --section-label-gradient: linear-gradient(95deg, #ffe100 0%, #35bc34 0%, #00c2cc 50%, #08aa89 69%, #0897bf 100%);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/InterDisplay-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/InterDisplay-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/InterDisplay-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+.footer-wordmark {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.footer-wordmark-image {
+  position: absolute;
+  display: block;
+  /* The supplied PNG has transparent space on its top and left edges. */
+  left: -6.4%;
+  top: -36.84%;
+  width: 113%;
+  height: auto;
+  max-width: none;
+}
+
+.device-shadow {
+  box-shadow: -5.16px 10.95px 49.52px rgba(36, 66, 52, .18);
+}
+
+.device-shadow-mobile {
+  box-shadow: -3.25px 6.89px 31.14px rgba(36, 66, 52, .18);
+}
+
+.qr-scan-sweep {
+  position: absolute;
+  inset: 0;
+}
+
+.qr-scan-sweep::before,
+.qr-scan-sweep::after {
+  content: "";
+  position: absolute;
+  top: 46.38%;
+  pointer-events: none;
+}
+
+.qr-scan-sweep::before {
+  left: 3.21%;
+  width: 92.31%;
+  height: 1px;
+  z-index: 1;
+  background: linear-gradient(90deg, transparent, rgba(7, 148, 85, .02) 20%, #079455 40%, #079455 60%, rgba(7, 148, 85, .02) 80%, transparent);
+}
+
+.qr-scan-sweep::after {
+  left: -1.28%;
+  width: 102.56%;
+  height: 53.62%;
+  background: linear-gradient(180deg, rgba(7, 148, 85, .2), rgba(7, 148, 85, 0));
+  -webkit-mask-image: radial-gradient(ellipse 40% 105% at 50% 0, #000 20%, transparent 100%);
+  mask-image: radial-gradient(ellipse 40% 105% at 50% 0, #000 20%, transparent 100%);
+}
+
+.qr-scan-sweep-mobile::after {
+  -webkit-mask-image: radial-gradient(ellipse 40% 105% at 50% 0, #000 20%, transparent 100%);
+  mask-image: radial-gradient(ellipse 40% 105% at 50% 0, #000 20%, transparent 100%);
+}
+
+.map-image-crop {
+  background-image: url("/assets/ee8ac.png");
+  background-size: 142.086% 110.444%;
+  background-position: -102.184px -14.517px;
+  background-repeat: no-repeat;
+}
+
+.map-image-crop-mobile {
+  background-position: -52.69px -7.49px;
+}
+
+.map-header {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 64.85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 15px;
+  background: white;
+  font-family: "Inter Display", "Inter", sans-serif;
+  white-space: nowrap;
+}
+
+.map-header strong {
+  color: #262b33;
+  font-size: 16px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.map-header span {
+  color: #5b626d;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.map-header-mobile {
+  height: 33.45px;
+  gap: 2px;
+  padding: 6px 8px;
+}
+
+.map-header-mobile strong { font-size: 8.2px; }
+.map-header-mobile span { font-size: 6.2px; }
+
+.pos-gradient-border {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(115deg, #ffe41a 0%, #35bc34 26%, #00c2cc 50%, #08aa89 69%, #0897bf 100%) border-box;
+}
+
+.final-cta-glass-mobile::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .20), rgba(255, 255, 255, .05));
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  backdrop-filter: blur(16px) saturate(1.15);
+  border: 1px solid rgba(255, 255, 255, .70);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .80),
+    0 -10px 80px rgba(10, 41, 27, .10),
+    0 40px 50px rgba(10, 41, 27, .03);
+}
+
+.final-cta-glass {
+  /* Figma 386:269: 40px radius, 20% white gradient fill, Glass frost 16,
+     refraction 61, depth 23, dispersion 50, light -45deg / 80%. */
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06) .997%, rgba(255, 255, 255, .01) 12.751%);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 -10px 80px 0 rgba(10, 41, 27, .1);
+}
+
+.hero-glass {
+  /* Figma 212:99: white 30% → 5% fill, Background blur radius 20
+     (Figma's generated CSS uses blur(10px)), and two drop shadows. */
+  background: linear-gradient(180deg, rgba(255, 255, 255, .30) .997%, rgba(255, 255, 255, .05) 12.751%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 80px rgba(10, 41, 27, .10),
+    0 40px 50px rgba(10, 41, 27, .03);
+}
+
+/* Figma's centered 0.7px stroke has three white alpha stops. The angle and
+   positions below are derived from the node's gradientTransform matrix. */
+.hero-glass::before {
+  content: "";
+  position: absolute;
+  inset: -0.35px;
+  border: 0.7px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(148deg,
+    rgba(255, 255, 255, 1) 6.3%,
+    rgba(255, 255, 255, 0) 41.5%,
+    rgba(255, 255, 255, 1) 63.1%) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0) border-box;
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0) border-box;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.hero-picture-shell [data-name="Stats Container"],
+.hero-picture-shell [data-name="Section Image Container"] {
+  z-index: 3;
+}
+
+.hero-picture-shell [data-name="Callout Image"] {
+  z-index: 2;
+}
+
+.final-cta-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  /* Figma Glass has no stroke: the edge is a specular highlight from -45deg. */
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, .8) 0%,
+    rgba(255, 255, 255, .26) 27%,
+    rgba(255, 255, 255, 0) 52%,
+    rgba(255, 255, 255, .08) 75%,
+    rgba(255, 255, 255, .65) 100%) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0) border-box;
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0) border-box;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.final-cta-glass-mobile::before {
+  content: "";
+  position: absolute;
+  inset: 32px 8px;
+  border-radius: 22px;
 }
