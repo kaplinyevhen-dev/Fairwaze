@@ -85,7 +85,9 @@ export default function Section236_26() {
               </div>
             </div>
             <div className="hero-pattern-surface absolute bg-size-[15px_15px] bg-top-left h-[484px] left-0 mix-blend-overlay opacity-35 pointer-events-none top-[156px] w-[1600px]" data-motion-pattern="hero" aria-hidden="true" style={{ backgroundImage: `url("${imgPatternTile}")` }} />
-          <div className="h-[640px] overflow-clip relative shrink-0 w-[1600px]" data-node-id="212:80" data-name="Hero Section picture">
+          
+<div className="h-[640px] overflow-visible relative shrink-0 w-[1600px]" data-node-id="212:80" data-name="Hero Section picture">
+
             <div
   className="hero-glass absolute z-[1] left-[264px] top-[43px] h-[1101px] w-[1070px] rounded-t-[24px] backdrop-blur-[40px]"
   data-node-id="212:99"
