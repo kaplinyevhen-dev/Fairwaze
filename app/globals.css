@@ -469,8 +469,8 @@ button, a {
   /* Figma 212:99: 40px radius, 20% white gradient fill, Glass frost 16,
      (Figma's generated CSS uses blur(40px)), and two drop shadows. */
   background: linear-gradient(180deg, rgba(255, 255, 255, .06) .997%, rgba(255, 255, 255, .01) 12.751%);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(80px) !important;
+  backdrop-filter: blur(80px) !important;
   box-shadow: 0 -10px 80px 0 rgba(10, 41, 27, .1);
 }
 
