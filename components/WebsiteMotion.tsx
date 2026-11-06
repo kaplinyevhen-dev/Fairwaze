@@ -13,8 +13,9 @@ const entrances: Entrance[] = [
   { ids: ["212:57", "278:3029"], y: 10, delay: 240 },
   { ids: ["212:58", "278:3030"], y: 8, delay: 360 },
   { ids: ["212:101", "278:3054"], y: 18, delay: 120 },
-  { ids: ["212:155", "278:3105"], fadeIn: true, delay: 280 },
-  { ids: ["212:152"], fadeIn: true, delay: 460 },
+  { ids: ["212:99"], y: 18, delay: 120 },
+  { ids: ["212:155", "278:3105"], fadeIn: true, delay: 100 },
+  { ids: ["212:152"], fadeIn: true, delay: 200 },
   { ids: ["212:190", "278:3139"], fromBottom: true, delay: 0 },
   // The central membership card is two siblings: move both by the same amount.
   { ids: ["212:192", "212:193", "278:3141", "278:3142"], fromBottom: true, delay: 650 },
@@ -46,7 +47,7 @@ const entrances: Entrance[] = [
   { ids: ["212:460", "278:3426"], x: 12, delay: 400 },
   { ids: ["212:465", "278:3431"], x: 12, delay: 620 },
   { ids: ["212:445", "278:3589"], fadeIn: true, delay: 0 },
-  { ids: ["212:443", "278:3587"], fadeIn: true, delay: 300 },
+  { ids: ["212:443", "278:3587"], fadeIn: true, delay: 120 },
 ];
 
 // Observe the card, not a tiny detail peeking above the viewport's lower edge.
@@ -56,6 +57,7 @@ const cardAnchors = ["212:181", "212:198", "212:226", "212:243", "278:3130", "27
 const headingAnchors = ["212:176", "278:3126", "212:692", "278:3238", "212:294", "278:3281", "212:430", "278:3577"];
 const anchorSelector = [...cardAnchors, ...headingAnchors].map(id => `[data-node-id="${id}"]`).join(",") + ",.booking-artwork";
 const gradientDuration = 5000;
+const quickStatsCards = new Set(["212:152", "212:155", "278:3105", "212:445", "278:3589", "212:443", "278:3587"]);
 const metricSelector = '[data-name="Statistics Row"] > div > p:first-child, [data-name="Stats"] > div > p:first-child';
 
 export default function WebsiteMotion({ root, isMobile, suspended }: {
@@ -99,7 +101,7 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     for (const spec of entrances) for (const id of spec.ids) {
       const element = query(id);
       if (!element) continue;
-      const anchor = element.closest<HTMLElement>(anchorSelector) ?? element;
+      const anchor = id === "212:99" ? query("212:101") ?? element : element.closest<HTMLElement>(anchorSelector) ?? element;
       const group = groups.get(anchor) ?? [];
       group.push({ element, spec });
       groups.set(anchor, group);
@@ -136,7 +138,7 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       const cardReveal = spec.fadeIn && !edge && !spec.x && !spec.y;
       if (cardReveal) y = 34 * factor;
       const options = {
-        duration: cardReveal ? (isMobile ? 720 : 860) : (isMobile ? 1100 : 1450), delay: spec.delay ?? 0,
+        duration: cardReveal ? (quickStatsCards.has(element.dataset.nodeId ?? "") ? 520 : (isMobile ? 720 : 860)) : (isMobile ? 1100 : 1450), delay: spec.delay ?? 0,
         easing: "cubic-bezier(.22,.68,.22,1)", fill: "backwards" as FillMode,
       };
       // Scale the whole card with its existing shadow. Multi-layer artwork
@@ -153,7 +155,7 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       // During a stagger delay the entire card, including its shadow, stays
       // hidden. It becomes visible as one layer on the first animation frame.
       const visibilityGate = cardReveal ? remember(element.animate([
-        { visibility: "hidden" }, { visibility: "visible" },
+        { visibility: "hidden", offset: 0 }, { visibility: "visible", offset: .001 }, { visibility: "visible", offset: 1 },
       ], options)) : null;
       element.classList.remove("fw-entrance-waiting");
       movement.addEventListener("finish", () => { element.dataset.motionState = "complete"; }, { once: true });
@@ -220,17 +222,20 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
         else {
           const analytics = analyticsGroups.get(entry.target as HTMLElement);
           const shouldCount = analytics && !counted.current.has(entry.target);
-          if (shouldCount) {
-            counted.current.add(entry.target);
-            // Display zero values while the card opens, without counting yet.
+          if (shouldCount) counted.current.add(entry.target);
+          let zerosVisible = false;
+          const showZeros = () => {
+            if (disposed || !analytics || zerosVisible) return;
+            zerosVisible = true;
             for (const counter of analytics) {
-              counter.show();
               counter.element.textContent = counter.prefix + (0).toFixed(counter.decimals) + counter.suffix;
               counter.element.dataset.countState = "waiting";
+              counter.show();
             }
-          }
+          };
           const startAnalytics = () => {
             if (disposed || !analytics) return;
+            showZeros();
             for (const counter of analytics) {
               counter.element.dataset.countState = "playing";
               counterJobs.set(counter.element, { start: performance.now() + 240, value: counter.value, prefix: counter.prefix,
@@ -242,6 +247,16 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
           for (const target of groups.get(entry.target) ?? []) {
             const appearance = reveal(target.element, target.spec);
             if (shouldCount && appearance && target.element === entry.target) {
+              // The zero state belongs to the card's first visible frame,
+              // after its stagger delay, never to an exposed bitmap overlay.
+              const awaitFirstFrame = () => {
+                if (disposed || zerosVisible) return;
+                if (appearance.playState === "paused" && !visible.has(entry.target)) return;
+                const time = Number(appearance.currentTime ?? 0);
+                if (time >= (target.spec.delay ?? 0) + 1 || appearance.playState === "finished") showZeros();
+                else requestAnimationFrame(awaitFirstFrame);
+              };
+              requestAnimationFrame(awaitFirstFrame);
               // Follow the actual appearance completion (including pauses),
               // rather than starting a separate wall-clock timeout.
               appearance.addEventListener("finish", startAnalytics, { once: true });
@@ -375,7 +390,8 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     }
     // Partition the original 15px repeating motif into four disjoint tile
     // groups. Animate only opacity: no extra triangles or moving background.
-    const patterns = HTMLElement[] = [];
+    const patterns = [query("212:559"), ...canvas.querySelectorAll<HTMLElement>("[data-motion-pattern]")]
+      .filter((element): element is HTMLElement => Boolean(element));
     for (const pattern of patterns) if (CSS.supports("mask-image", "conic-gradient(#000, transparent)")) {
       const original = pattern.style.backgroundImage;
       const style = getComputedStyle(pattern);

@@ -40,7 +40,7 @@ export function mountAnalyticsCounters(card: HTMLElement, image: HTMLImageElemen
     group.setAttribute("visibility", "hidden");
     const rect = document.createElementNS(ns, "rect");
     ["x", "y", "width", "height"].forEach((name, index) => rect.setAttribute(name, String(spec.box[index])));
-    rect.setAttribute("fill", spec.background ?? "#fafafa");
+    rect.setAttribute("fill", spec.background ?? "#fff");
     const text = document.createElementNS(ns, "text");
     text.setAttribute("x", String(spec.x)); text.setAttribute("y", String(spec.y));
     text.setAttribute("fill", spec.color); text.setAttribute("font-size", String(spec.size));

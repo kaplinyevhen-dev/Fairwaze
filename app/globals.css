@@ -5,28 +5,28 @@
   src: url("/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("/fonts/PlusJakartaSans-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("/fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("/fonts/PlusJakartaSans-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
@@ -466,21 +466,36 @@ button, a {
 }
 
 .hero-glass {
-  /* Figma 212:99: 40px radius, 20% white gradient fill, Glass frost 16,
-     (Figma's generated CSS uses blur(40px)), and two drop shadows. */
-   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.30) 1%,
-    rgba(255, 255, 255, 0.05) 12.75%
-  );
-
+  /* Figma 212:99: white 30% → 5% fill, Background blur radius 20
+     (Figma's generated CSS uses blur(10px)), and two drop shadows. */
+  background: linear-gradient(180deg, rgba(255, 255, 255, .30) .997%, rgba(255, 255, 255, .05) 12.751%);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-
-  box-shadow:
-    0 10px 80px rgba(10, 41, 27, 0.10),
-    0 40px 50px rgba(10, 41, 27, 0.03);
+  box-shadow: 0 10px 80px rgba(10, 41, 27, .10),
+    0 40px 50px rgba(10, 41, 27, .03);
 }
+
+.hero-picture-shell { clip-path: inset(-90px 0 0 0); }
+
+/* Let the upper Figma shadows fade naturally while clipping the unused
+   lower portion of the 1101px artwork at the hero's original bottom edge. */
+
+/* The dotted arrow pulses at rest; the hover state uses solid Figma green. */
+[data-node-id]:has(> .figma-hotspot--primary) img[src="/assets/c014f.svg"] {
+  animation: hero-arrow-pulse 1.8s ease-in-out infinite;
+}
+@keyframes hero-arrow-pulse {
+  0%, 100% { opacity: .42; }
+  50% { opacity: 1; }
+}
+[data-node-id]:has(> .figma-hotspot--primary:is(:hover, :focus-visible)) img[src="/assets/c014f.svg"] {
+  animation: none;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-node-id]:has(> .figma-hotspot--primary) img[src="/assets/c014f.svg"] { animation: none; opacity: 1; }
+}
+
 /* Figma's centered 0.7px stroke has three white alpha stops. The angle and
    positions below are derived from the node's gradientTransform matrix. */
 .hero-glass::before {
