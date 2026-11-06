@@ -86,7 +86,12 @@ export default function Section236_26() {
             </div>
             <div className="hero-pattern-surface absolute bg-size-[15px_15px] bg-top-left h-[484px] left-0 mix-blend-overlay opacity-35 pointer-events-none top-[156px] w-[1600px]" data-motion-pattern="hero" aria-hidden="true" style={{ backgroundImage: `url("${imgPatternTile}")` }} />
           <div className="h-[640px] overflow-clip relative shrink-0 w-[1600px]" data-node-id="212:80" data-name="Hero Section picture">
-            <div className="hero-glass absolute left-[264px] top-[43px] h-[1101px] w-[1070px] rounded-t-[24px]" data-node-id="212:99" data-name="Background Shape" aria-hidden="true" />
+            <div
+  className="hero-glass absolute z-[1] left-[264px] top-[43px] h-[1101px] w-[1070px] rounded-t-[24px] backdrop-blur-[40px]"
+  data-node-id="212:99"
+  data-name="Background Shape"
+  aria-hidden="true"
+/>
             <div className="-translate-x-1/2 absolute contents left-[calc(50%-2px)] top-[51px]" data-node-id="212:100" data-name="Feature Image Container">
               <div className="-translate-x-1/2 absolute border border-[#e8e9ea] border-solid h-[799.069px] left-[calc(50%-2px)] overflow-clip rounded-[16px] shadow-[0px_2.142px_4.285px_0px_rgba(0,0,0,0.2)] top-[51px] w-[1054px]" data-node-id="212:101" data-name="Callout Image">
                 <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[16px]">
