@@ -73,7 +73,7 @@ export default function Section236_26() {
               </p>
             </div>
           </div>
-          <div className="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] left-[424.5px] text-[13px] text-[color:var(--text\/muted,#666)] text-center top-[291px] whitespace-nowrap" data-node-id="212:733">
+          <div className="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] left-[calc(50%-78.5px)] text-[13px] text-[color:var(--text\/muted,#666)] text-center top-[291px] whitespace-nowrap" data-node-id="212:733">
             <p className="leading-[normal]">Transition in under a day</p>
           </div>
         </div>
