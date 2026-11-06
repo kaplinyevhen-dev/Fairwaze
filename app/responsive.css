@@ -59,7 +59,12 @@
   .responsive-canvas [data-node-id="212:52"] { width: min(1013px, calc(100% - 2 * var(--page-gutter))); gap: 32px; }
   .responsive-canvas [data-node-id="212:56"] { width: 100%; min-width: 0; line-height: 1.15; }
   .responsive-canvas [data-node-id="212:57"] { width: min(648px, 100%); }
-  .responsive-canvas [data-node-id="212:733"] { position: relative; inset: auto; translate: none; margin-top: -18px; }
+  .responsive-canvas [data-node-id="212:733"] {
+  position: relative;
+  inset: auto;
+  translate: -109px 0;
+  margin-top: -18px;
+}
   .responsive-canvas .hero-artwork { max-width: 1600px; }
   .responsive-canvas [data-node-id="212:58"] > div { min-height: 44px; }
 
