@@ -62,7 +62,8 @@
   .responsive-canvas [data-node-id="212:733"] {
   position: relative;
   inset: auto;
-  translate: -109px 0;
+  transform: translateX(-109px);
+  translate: none;
   margin-top: -18px;
 }
   .responsive-canvas .hero-artwork { max-width: 1600px; }
