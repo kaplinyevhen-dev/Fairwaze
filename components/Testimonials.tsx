@@ -86,7 +86,7 @@ export default function Testimonials({ mobile = false }: { mobile?: boolean }) {
   };
 
   const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
-    if (!event.isPrimary || event.button !== 0) return;
+    if (!event.isPrimary || event.button !== 0 || event.pointerType === "touch") return;
     const element = event.currentTarget;
     ignoreClick.current = false;
     drag.current = { id: event.pointerId, x: event.clientX, y: event.clientY, start: element.scrollLeft, lastX: event.clientX, time: event.timeStamp, velocity: 0, scale: element.getBoundingClientRect().width / element.offsetWidth, moved: false };

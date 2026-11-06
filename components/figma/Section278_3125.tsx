@@ -132,7 +132,7 @@ export default function Section278_3125() {
               <div className="absolute inset-[50.64%_36.43%_18.45%_35.66%]" data-node-id="278:3160" data-name="Vector">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
               </div>
-              <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[82.93%] font-['Inter_Display:SemiBold'] leading-[1.15] left-[calc(50%+0.13px)] not-italic text-[10.733px] text-[color:var(--text\/ui-dark,#373c45)] text-center top-[9.87%] whitespace-nowrap" data-node-id="278:3161">
+              <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[82.93%] font-['Inter_Display'] font-semibold leading-[1.15] left-[calc(50%+0.13px)] not-italic text-[10.733px] text-[color:var(--text\/ui-dark,#373c45)] text-center top-[9.87%] whitespace-nowrap" data-node-id="278:3161">
                 2 minutes remaining
               </p>
               <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[66.2%] font-['Inter_Display'] font-normal leading-[1.45] left-[calc(50%+0.36px)] not-italic text-[7.871px] text-[color:var(--text\/ui-muted,#525861)] text-center top-[20.6%] w-[149.547px]" data-node-id="278:3162">

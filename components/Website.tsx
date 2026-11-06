@@ -133,11 +133,13 @@ function useHotspots(
 
 function Canvas({
   isMobile,
+  wideMobile,
   scale,
   rootRef,
   hidden,
 }: {
   isMobile: boolean;
+  wideMobile: boolean;
   scale: number;
   rootRef: RefObject<HTMLDivElement | null>;
   hidden: boolean;
@@ -147,19 +149,19 @@ function Canvas({
   const height = isMobile ? 8429.5 : 8519;
   return (
     <main
-      className={isMobile ? "mobile-page" : "desktop-page"}
-      style={{ width: isMobile ? width * scale : "100%", height: isMobile ? height * scale : "auto", marginInline: "auto", visibility: hidden ? "hidden" : "visible" }}
+      className={isMobile ? `mobile-page${wideMobile ? " mobile-page-wide" : ""}` : "desktop-page"}
+      style={{ width: isMobile && !wideMobile ? width * scale : "100%", height: isMobile && !wideMobile ? height * scale : "auto", marginInline: "auto", visibility: hidden ? "hidden" : "visible" }}
     >
       <div
         ref={rootRef}
         id="top"
-        className={`page-canvas ${isMobile ? "mobile-canvas" : "responsive-canvas"}`}
-        style={isMobile ? { width, height, transform: `scale(${scale})` } : undefined}
+        className={`page-canvas ${isMobile ? `mobile-canvas${wideMobile ? " mobile-canvas-wide" : ""}` : "responsive-canvas"}`}
+        style={isMobile && !wideMobile ? { width, height, transform: `scale(${scale})` } : undefined}
       >
         {sections.map(({ top, height: sectionHeight, Component }, index) => (
           <section
             className="canvas-section"
-            style={isMobile ? { top, height: sectionHeight } : undefined}
+            style={isMobile && !wideMobile ? { top, height: sectionHeight } : undefined}
             aria-label={index === 0 ? "Introduction" : undefined}
             key={top}
           >
@@ -180,7 +182,8 @@ export default function Website() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const lastFocusRef = useRef<HTMLElement | null>(null);
   const isMobile = viewport < 768;
-  const scale = isMobile ? Math.min(viewport / 375, 1.25) : 1;
+  const wideMobile = viewport >= 470 && viewport < 768;
+  const scale = isMobile && !wideMobile ? viewport / 375 : 1;
 
   useEffect(() => {
     const update = () => setViewport(window.innerWidth);
@@ -240,7 +243,7 @@ export default function Website() {
 
   return (
     <>
-      <Canvas isMobile={isMobile} scale={scale} rootRef={canvasRef} hidden={menuOpen && isMobile} />
+      <Canvas isMobile={isMobile} wideMobile={wideMobile} scale={scale} rootRef={canvasRef} hidden={menuOpen && isMobile} />
       <WebsiteMotion root={canvasRef} isMobile={isMobile} suspended={menuOpen || dialogLabel !== null} />
       {menuOpen && isMobile && (
         <>

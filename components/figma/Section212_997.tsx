@@ -6,7 +6,6 @@ const imgImage2 = "/assets/6327e.png";
 const imgImage3 = "/assets/5595a.png";
 const imgImage4 = "/assets/91fb5.png";
 const imgImage5 = "/assets/ee855.png";
-const imgImage6 = "/assets/8cc51.png";
 const imgEllipse41844 = "/assets/4283c.svg";
 const imgEllipse41843 = "/assets/5686c.svg";
 const imgEllipse41847 = "/assets/047a9.svg";
@@ -375,8 +374,8 @@ export default function Section212_997() {
                   <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage5} />
                 </div>
                 <div className="absolute bg-[var(--background\/white,white)] border-[#f4f4f4] border-[0.923px] border-solid h-[65.071px] left-[22.28px] rounded-[14.767px] shadow-[0px_5.537px_11.075px_0px_rgba(0,0,0,0.1)] top-[708.35px] w-[344.126px]" data-node-id="212:315" data-name="Container" />
-                <div className="absolute h-[39.273px] left-[35.47px] rounded-[7.383px] top-[721.25px] w-[317.741px]" data-node-id="212:316" data-name="Image">
-                  <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none rounded-[7.383px] size-full" src={imgImage6} />
+                <div className="absolute bg-[#459563] flex h-[39.273px] items-center justify-center left-[35.47px] rounded-[7.383px] top-[721.25px] w-[317.741px]" data-node-id="212:316" data-name="View cart button">
+                  <span className="font-['Inter_Display'] font-semibold leading-none text-[16px] text-white whitespace-nowrap">View cart • 3 items</span>
                 </div>
                 <div className="absolute bg-[var(--background\/white,white)] h-[1.537px] left-[335.24px] top-[769.16px] w-[2.661px]" data-node-id="212:317" data-name="Indicator" />
                 <div className="absolute bg-[#f1f1f2] h-[1.537px] left-[124.9px] top-[769.16px] w-[4.3px]" data-node-id="212:318" data-name="Indicator" />

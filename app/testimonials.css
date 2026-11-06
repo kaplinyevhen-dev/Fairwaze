@@ -20,7 +20,7 @@
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   cursor: grab;
-  touch-action: pan-y pinch-zoom;
+  touch-action: auto;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -76,6 +76,26 @@
 .testimonials-mobile .testimonial-metrics > div { padding: 18px 20px; border-radius: 16px; flex-direction: row; align-items: center; gap: 12px; }
 .testimonials-mobile .testimonial-metrics p:first-child { font-size: 24px; width: 88px; flex-shrink: 0; }
 .testimonials-mobile .testimonial-metrics p:last-child { font-size: 14px; }
+@media (min-width: 470px) and (max-width: 767px) {
+  .testimonials-mobile { height: auto; padding-top: 56px; }
+  .testimonials-mobile .testimonials-viewport { --card-width: min(560px, calc(100vw - 48px)); padding-inline: 24px; }
+  .testimonials-mobile .testimonial-quote-panel { min-height: 0; }
+  .testimonials-mobile .testimonial-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .testimonials-mobile .testimonial-metrics > div { flex-direction: column; align-items: flex-start; }
+  .testimonials-mobile .testimonial-metrics p:first-child { width: auto; }
+}
+@media (min-width: 700px) and (max-width: 767px) {
+  .testimonials-mobile .testimonials-viewport { --card-width: 343px; gap: 16px; padding-top: 40px; }
+  .testimonials-mobile .testimonial-card { min-height: 400px; }
+  .testimonials-mobile .testimonial-quote-panel { min-height: 280px; }
+  .testimonials-mobile .testimonial-quote-panel blockquote { font-size: 13px; line-height: 1.45; }
+  .testimonials-mobile .testimonial-author p { font-size: 9px; }
+  .testimonials-mobile .testimonial-author > img { width: 28px; height: 28px; }
+  .testimonials-mobile .testimonial-metrics { gap: 8px; }
+  .testimonials-mobile .testimonial-metrics > div { padding: 12px; gap: 8px; }
+  .testimonials-mobile .testimonial-metrics p:first-child { font-size: 18px; }
+  .testimonials-mobile .testimonial-metrics p:last-child { font-size: 9px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .testimonials-viewport { scroll-behavior: auto; }
   .testimonial-card, .testimonial-quote-panel::before, .testimonial-metrics p:first-child { transition: none; }

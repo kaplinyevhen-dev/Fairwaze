@@ -1,6 +1,7 @@
 import ResponsiveArtwork from "../ResponsiveArtwork";
 
-const imgBackgroundGradient = "/assets/59c1e.png";
+const imgBackgroundGradient = "/assets/hero-gradient-409-658.png";
+const imgHeroEllipse = "/assets/hero-ellipse-409-659.svg";
 const imgCalloutImage = "/assets/d3985.png";
 const imgMainImage = "/assets/55c12.png";
 const imgBackgroundSquare = "/assets/5c8d7.png";
@@ -57,6 +58,7 @@ export default function Section236_26() {
             </div>
           </div>
           <div className="content-stretch flex gap-[20px] items-center relative shrink-0" data-node-id="212:58" data-name="Hero Buttons">
+            <div className="hero-primary-with-caption relative shrink-0">
             <div className="bg-[var(--text\/primary,#262626)] content-stretch drop-shadow-[0px_3px_3px_rgba(0,0,0,0.2)] flex gap-[12px] h-[44px] items-center justify-center pl-[24px] pr-[20px] py-[12px] relative rounded-[10px] shrink-0 w-[155px]" data-node-id="242:1005" data-name="Primary">
               <p className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-medium leading-[normal] relative shrink-0 text-[15px] text-[color:var(--text\/on-dark,white)] whitespace-nowrap" data-node-id="I242:1005;242:54">
                 Get started
@@ -67,25 +69,35 @@ export default function Section236_26() {
                 </div>
               </div>
             </div>
+            <div className="hero-primary-caption [word-break:break-word] absolute font-['Plus_Jakarta_Sans'] font-normal text-[13px] text-[color:var(--text\/muted,#666)] text-center whitespace-nowrap" data-node-id="212:733">
+              Transition in under a day
+            </div>
+            </div>
             <div className="bg-[rgba(38,38,38,0.05)] border border-[rgba(38,38,38,0.08)] border-solid content-stretch flex h-[43px] items-center justify-center pb-[12px] pt-[10px] px-[24px] relative rounded-[10px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0)] shrink-0" data-node-id="242:1009" data-name="Primary">
               <p className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-medium leading-[normal] relative shrink-0 text-[15px] text-[color:var(--text\/primary,#262626)] whitespace-nowrap" data-node-id="I242:1009;242:72">
                 Book a demo
               </p>
             </div>
           </div>
-          <div className="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] left-[calc(50%-78.5px)] text-[13px] text-[color:var(--text\/muted,#666)] text-center top-[291px] whitespace-nowrap" data-node-id="212:733">
-            <p className="leading-[normal]">Transition in under a day</p>
-          </div>
         </div>
         <ResponsiveArtwork width={1600} height={640} className="hero-artwork">
   <div className="hero-picture-shell h-[640px] relative shrink-0 w-[1600px]">
-            <div className="absolute h-[484px] left-0 top-[156px] w-[1600px]" data-node-id="300:3992" data-name="Background gradient">
+            <div className="absolute h-[484px] left-1/2 top-[156px] -translate-x-1/2 overflow-hidden w-[2164.911px]" data-node-id="409:658" data-name="Background gradient">
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <img alt="" className="absolute h-[156.25%] left-[-14.37%] max-w-none top-[-28.33%] w-[114.44%]" src={imgBackgroundGradient} />
+                <img alt="" className="absolute h-[156.25%] left-[0.01%] max-w-none top-[-28.33%] w-[99.99%]" src={imgBackgroundGradient} />
+              </div>
+              <div className="-translate-y-1/2 absolute left-[-59.65px] size-[392px] top-[calc(50%-164.04px)] pointer-events-none" data-node-id="409:659" aria-hidden="true">
+                <div className="absolute inset-[-70.36%]">
+                  <img alt="" className="block max-w-none size-full" src={imgHeroEllipse} />
+                </div>
               </div>
             </div>
             <div className="hero-pattern-surface absolute bg-size-[15px_15px] bg-top-left h-[484px] left-0 opacity-25 pointer-events-none top-[156px] w-[1600px]" data-motion-pattern="hero" aria-hidden="true" style={{ backgroundImage: `url("${imgPatternTile}")` }} />
-            <div className="hero-glass absolute left-[263px] top-[43px] h-[1101px] w-[1070px] rounded-t-[24px]" data-node-id="212:99" data-name="Background Shape" aria-hidden="true" />
+            <div className="hero-glass-clip" aria-hidden="true">
+              <div className="hero-glass-positioner">
+                <div className="hero-glass absolute left-[263px] top-[43px] h-[1101px] w-[1070px] rounded-t-[24px]" data-node-id="212:99" data-name="Background Shape" />
+              </div>
+            </div>
           <div className="h-[640px] overflow-clip relative shrink-0 w-[1600px]" data-node-id="212:80" data-name="Hero Section picture">
             <div className="-translate-x-1/2 absolute contents left-[calc(50%-2px)] top-[51px]" data-node-id="212:100" data-name="Feature Image Container">
               <div className="-translate-x-1/2 absolute border border-[#e8e9ea] border-solid h-[799.069px] left-[calc(50%-2px)] overflow-clip rounded-[16px] shadow-[0px_2.142px_4.285px_0px_rgba(0,0,0,0.2)] top-[51px] w-[1054px]" data-node-id="212:101" data-name="Callout Image">

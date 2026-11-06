@@ -13,7 +13,7 @@ const entrances: Entrance[] = [
   { ids: ["212:57", "278:3029"], y: 10, delay: 240 },
   { ids: ["212:58", "278:3030"], y: 8, delay: 360 },
   { ids: ["212:101", "278:3054"], y: 18, delay: 120 },
-  { ids: ["212:99"], y: 18, delay: 120 },
+  { ids: ["212:99", "278:3052"], y: 18, delay: 120 },
   { ids: ["212:155", "278:3105"], fadeIn: true, delay: 100 },
   { ids: ["212:152"], fadeIn: true, delay: 200 },
   { ids: ["212:190", "278:3139"], fromBottom: true, delay: 0 },
@@ -101,7 +101,9 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     for (const spec of entrances) for (const id of spec.ids) {
       const element = query(id);
       if (!element) continue;
-      const anchor = id === "212:99" ? query("212:101") ?? element : element.closest<HTMLElement>(anchorSelector) ?? element;
+      const anchor = id === "212:99" ? query("212:101") ?? element
+        : id === "278:3052" ? query("278:3054") ?? element
+        : element.closest<HTMLElement>(anchorSelector) ?? element;
       const group = groups.get(anchor) ?? [];
       group.push({ element, spec });
       groups.set(anchor, group);
@@ -160,10 +162,13 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       element.classList.remove("fw-entrance-waiting");
       movement.addEventListener("finish", () => { element.dataset.motionState = "complete"; }, { once: true });
       // Hide/leave the viewport mid-entrance: freeze rather than finishing unseen.
-      const groupAnimations = entrancesInFlight.get(element.closest(anchorSelector) ?? element) ?? [];
+      const animationAnchor = element.dataset.nodeId === "212:99" ? query("212:101") ?? element
+        : element.dataset.nodeId === "278:3052" ? query("278:3054") ?? element
+        : element.closest<HTMLElement>(anchorSelector) ?? element;
+      const groupAnimations = entrancesInFlight.get(animationAnchor) ?? [];
       groupAnimations.push(movement);
       if (visibilityGate) groupAnimations.push(visibilityGate);
-      entrancesInFlight.set(element.closest(anchorSelector) ?? element, groupAnimations);
+      entrancesInFlight.set(animationAnchor, groupAnimations);
       return movement;
     };
     const entrancesInFlight = new Map<Element, Animation[]>();

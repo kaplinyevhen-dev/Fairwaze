@@ -1,9 +1,18 @@
-/* Desktop and tablet layout. Mobile keeps its original Figma canvas. */
+/* Desktop and tablet layout. Narrow phones keep the original Figma canvas. */
 .responsive-artwork {
   position: relative;
   width: 100%;
   min-width: 0;
   flex: none;
+}
+
+@media (max-width: 767px) {
+  [data-node-id="278:3284"] :is([data-node-id="278:3389"], [data-node-id="278:3404"]) {
+    right: 25px;
+    width: auto;
+    max-width: none;
+    text-align: left;
+  }
 }
 
 .responsive-artwork-inner {
@@ -59,13 +68,6 @@
   .responsive-canvas [data-node-id="212:52"] { width: min(1013px, calc(100% - 2 * var(--page-gutter))); gap: 32px; }
   .responsive-canvas [data-node-id="212:56"] { width: 100%; min-width: 0; line-height: 1.15; }
   .responsive-canvas [data-node-id="212:57"] { width: min(648px, 100%); }
-  .responsive-canvas [data-node-id="212:733"] {
-  position: relative;
-  inset: auto;
-  transform: translateX(-109px);
-  translate: none;
-  margin-top: -18px;
-}
   .responsive-canvas .hero-artwork { max-width: 1600px; }
   .responsive-canvas [data-node-id="212:58"] > div { min-height: 44px; }
 
@@ -197,21 +199,152 @@
 }
 
 @media (min-width: 1600px) {
-  .responsive-canvas .hero-artwork { isolation: isolate; }
-  .responsive-canvas .hero-pattern-surface {
+  .responsive-canvas .hero-artwork { width: 1600px; isolation: isolate; }
+  .responsive-canvas .hero-pattern-surface { left: 50%; width: 100vw; transform: translateX(-50%); }
+}
+
+/* Wider phones use the mobile composition in normal document flow. */
+@media (min-width: 470px) and (max-width: 767px) {
+  .mobile-page-wide, .mobile-canvas-wide { width: 100%; height: auto; }
+  .mobile-canvas-wide { transform: none; overflow: clip; }
+  .mobile-canvas-wide > .canvas-section { position: relative; inset: auto; height: auto; overflow: visible; }
+  .mobile-canvas-wide > .canvas-section > div { width: 100%; height: auto; min-width: 0; }
+  .mobile-canvas-wide :is(h1, h2) { text-wrap: balance; }
+
+  .mobile-canvas-wide [data-node-id="278:2994"] { gap: clamp(48px, 7vw, 72px); }
+  .mobile-canvas-wide [data-node-id="278:2995"] { width: min(100% - 40px, 680px); }
+  .mobile-canvas-wide [data-node-id="278:3024"] { width: min(100% - 40px, 640px); }
+  .mobile-canvas-wide [data-node-id="278:3025"] { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3028"] { width: min(100%, 560px); font-size: clamp(44px, 7.2vw, 56px); }
+  .mobile-canvas-wide [data-node-id="278:3029"] { width: min(100%, 560px); }
+  .mobile-canvas-wide .hero-picture-shell-mobile { width: 100%; height: clamp(320px, 52vw, 440px); overflow: visible; }
+  .mobile-canvas-wide [data-node-id="278:3034"] { --hero-dashboard-left: clamp(100px, calc(25vw - 17.5px), 175px); width: 100%; height: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3052"] { left: calc(var(--hero-dashboard-left) - 8px); }
+  .mobile-canvas-wide [data-node-id="278:3054"] { left: var(--hero-dashboard-left); translate: none; transform: none; }
+  .mobile-canvas-wide [data-node-id="278:3105"] { left: calc(var(--hero-dashboard-left) - 37px); }
+  .mobile-canvas-wide [data-node-id="278:3035"] {
     left: 50%;
-    width: 100vw;
     transform: translateX(-50%);
+    width: max(977px, 150vw);
+    background: url("/assets/hero-gradient-409-658.png") center / cover no-repeat;
   }
-  .responsive-canvas .hero-artwork::before {
-    content: "";
-    position: absolute;
-    top: 24.375%;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    background: url("/assets/59c1e.png") center / cover no-repeat;
-    z-index: -1;
+  .mobile-canvas-wide [data-node-id="278:3036"] { display: none; }
+  .mobile-canvas-wide [data-node-id="278:3104"] { width: 100%; }
+
+  .mobile-canvas-wide :is([data-node-id="278:3107"], [data-node-id="278:3125"], [data-node-id="278:3237"], [data-node-id="278:3280"], [data-node-id="278:3415"], [data-node-id="278:3576"]) { padding-inline: clamp(20px, 5vw, 40px); }
+  .mobile-canvas-wide :is([data-node-id="278:3129"], [data-node-id="278:3242"], [data-node-id="278:3284"]) { width: 100%; }
+  .mobile-canvas-wide :is([data-node-id="278:3129"], [data-node-id="278:3242"], [data-node-id="278:3284"]) > div { width: 100%; min-width: 0; }
+  .mobile-canvas-wide [data-node-id="278:3129"] > div > div:last-child { width: 100%; margin-inline: auto; }
+  /* Let the artwork surface grow with its card, while its 328px UI composition stays centered. */
+  .mobile-canvas-wide :is([data-node-id="278:3135"], [data-node-id="278:3178"]) :is([data-node-id="278:3138"], [data-node-id="278:3181"]) {
+    left: 0;
+    width: 100%;
+    mask-size: 458.199px 264px;
+    mask-repeat: repeat;
   }
+  .mobile-canvas-wide [data-node-id="278:3139"] { left: calc(50% - 144.92px); }
+  .mobile-canvas-wide [data-node-id="278:3141"] { left: calc(50% - 52.7px); }
+  .mobile-canvas-wide [data-node-id="278:3142"] { left: calc(50% - 51.32px); }
+  .mobile-canvas-wide [data-node-id="278:3145"] { left: calc(50% + 55.35px); }
+  .mobile-canvas-wide [data-node-id="278:3183"] { inset: 0 auto auto 50%; width: 328px; height: 100%; transform: translateX(-50%); }
+  .mobile-canvas-wide [data-node-id="278:3208"] { left: calc(50% - 3.19px); }
+  .mobile-canvas-wide :is([data-node-id="278:3153"], [data-node-id="278:3226"], [data-node-id="278:3227"]) { left: 0; width: 100%; }
+  .mobile-canvas-wide :is([data-node-id="278:3153"], [data-node-id="278:3226"], [data-node-id="278:3227"]) > div { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3231"] { left: calc(50% - 82.28px); }
+  .mobile-canvas-wide [data-node-id="278:3233"] { left: calc(50% - 102.88px); }
+  .mobile-canvas-wide [data-node-id="278:3235"] { left: calc(50% - 124.81px); }
+  .mobile-canvas-wide [data-node-id="278:3242"] > div > div:last-child { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3242"] p { max-width: 100%; }
+  .mobile-canvas-wide :is([data-node-id="278:3241"], [data-node-id="278:3419"], [data-node-id="278:3580"]) { width: min(100%, 600px); }
+  .mobile-canvas-wide [data-node-id="278:3272"] { justify-content: center; padding: 56px clamp(20px, 5vw, 40px); }
+  .mobile-canvas-wide [data-node-id="278:3273"] { width: min(100%, 600px); padding-inline: clamp(24px, 6vw, 64px); }
+  .mobile-canvas-wide [data-node-id="278:3274"] { width: 100%; }
+  .mobile-canvas-wide :is([data-node-id="278:3275"], [data-node-id="278:3276"]) { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3420"] { width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px; }
+  .mobile-canvas-wide [data-node-id="278:3420"] > div { width: calc(50% - 8px); justify-content: center; }
+  .mobile-canvas-wide [data-node-id="278:3436"] { width: 344px; margin-inline: auto; }
+  .mobile-canvas-wide [data-node-id="278:3581"] { width: 344px; margin-inline: auto; }
+  .mobile-canvas-wide [data-node-id="278:3591"] { width: 100%; justify-content: center; padding: 56px clamp(20px, 5vw, 40px); }
+  .mobile-canvas-wide [data-node-id="278:3592"] { width: min(100%, 600px); padding-inline: clamp(24px, 6vw, 64px); }
+  .mobile-canvas-wide :is([data-node-id="278:3593"], [data-node-id="278:3594"], [data-node-id="278:3595"]) { width: 100%; }
+  .mobile-canvas-wide .final-cta-glass-mobile > div:first-child img { width: 100%; height: 100%; inset: 0; object-fit: cover; }
+  .mobile-canvas-wide [data-node-id="278:3599"] { padding-inline: clamp(20px, 5vw, 40px); }
+  .mobile-canvas-wide [data-node-id="278:3625"] { width: min(100%, 560px); }
+}
+
+@media (min-width: 470px) and (max-width: 599px) {
+  .mobile-canvas-wide :is([data-node-id="278:3436"], [data-node-id="278:3581"]) { zoom: 1.2; }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .mobile-canvas-wide :is([data-node-id="278:3436"], [data-node-id="278:3581"]) { zoom: 1.35; }
+}
+
+@media (min-width: 540px) and (max-width: 699px) {
+  .mobile-canvas-wide :is([data-node-id="278:3277"], [data-node-id="278:3596"]) { flex-direction: row; align-items: center; }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .mobile-canvas-wide [data-node-id="278:3599"] { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-content: flex-start; padding: 48px 32px 96px; gap: 40px 20px; }
+  .mobile-canvas-wide [data-node-id="278:3600"] { width: 110px; height: 24px; }
+  .mobile-canvas-wide [data-node-id="278:3621"] { gap: 32px; }
+  .mobile-canvas-wide [data-node-id="278:3625"] { flex-basis: 100%; width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3626"] { width: 100%; height: auto; flex-direction: row; }
+  .mobile-canvas-wide [data-node-id="278:3635"] { left: 50%; top: auto; bottom: -6px; width: min(100%, 536px); transform: translateX(-50%); }
+}
+
+@media (min-width: 700px) and (max-width: 767px) {
+  .mobile-canvas-wide :is([data-node-id="278:3436"], [data-node-id="278:3581"]) { zoom: 1.5; }
+  .mobile-canvas-wide [data-node-id="278:3420"] { flex-wrap: nowrap; }
+  .mobile-canvas-wide [data-node-id="278:3420"] > div { width: auto; }
+
+  /* Figma 411:682: the 767px composition uses two columns and a compact hero. */
+  .mobile-canvas-wide [data-node-id="278:2994"] { gap: 0; }
+  .mobile-canvas-wide [data-node-id="278:2995"] { width: calc(100% - 64px); }
+  .mobile-canvas-wide [data-node-id="278:3024"] { width: calc(100% - 64px); height: 266px; gap: 28px; margin-top: 54px; justify-content: flex-start; }
+  .mobile-canvas-wide [data-node-id="278:3025"] { width: min(100%, 491px); }
+  .mobile-canvas-wide [data-node-id="278:3028"] { width: 100%; font-size: 44px; white-space: nowrap; }
+  .mobile-canvas-wide [data-node-id="278:3029"] { width: 100%; }
+  .mobile-canvas-wide .hero-picture-shell-mobile { height: 374px; }
+  .mobile-canvas-wide [data-node-id="278:3035"] { top: 113px; width: 977px; }
+  .mobile-canvas-wide [data-node-id="278:3052"] { top: 66px; }
+  .mobile-canvas-wide [data-node-id="278:3054"] { top: 74px; }
+  .mobile-canvas-wide [data-node-id="278:3104"] { left: -6px; top: 323px; }
+  .mobile-canvas-wide [data-node-id="278:3105"] { top: 205px; }
+
+  .mobile-canvas-wide [data-node-id="278:3107"] { padding-inline: 32px; gap: 32px; }
+  .mobile-canvas-wide [data-node-id="278:3108"] { font-size: 20px; }
+  .mobile-canvas-wide [data-node-id="278:3108"] p { display: inline; }
+  .mobile-canvas-wide [data-node-id="278:3109"] { flex-wrap: nowrap; gap: clamp(14px, 3.9vw, 30px); }
+
+  .mobile-canvas-wide [data-node-id="278:3125"] { padding-inline: 32px; }
+  .mobile-canvas-wide [data-node-id="278:3129"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+  .mobile-canvas-wide [data-node-id="278:3129"] > div { width: 100%; height: 427px; justify-content: space-between; }
+  .mobile-canvas-wide [data-node-id="278:3129"] > div > div:last-child { width: 100%; }
+
+  .mobile-canvas-wide [data-node-id="278:3237"] { padding-inline: 16px; }
+  .mobile-canvas-wide [data-node-id="278:3238"] { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3242"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .mobile-canvas-wide [data-node-id="278:3242"] > div { width: 100%; min-width: 0; }
+  .mobile-canvas-wide [data-node-id="278:3242"] > div > div:last-child { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3242"] p { max-width: 100%; }
+
+  .mobile-canvas-wide [data-node-id="278:3272"] { padding-inline: 74px; }
+  .mobile-canvas-wide [data-node-id="278:3273"] { width: 100%; min-height: 281px; }
+  .mobile-canvas-wide [data-node-id="278:3277"] { flex-direction: row; align-items: center; }
+
+  .mobile-canvas-wide [data-node-id="278:3280"] { padding-inline: 16px; }
+  .mobile-canvas-wide [data-node-id="278:3284"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .mobile-canvas-wide [data-node-id="278:3284"] > div { width: 100%; }
+
+  .mobile-canvas-wide [data-node-id="278:3591"] { padding-inline: 32px; }
+  .mobile-canvas-wide [data-node-id="278:3592"] { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3593"] { width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3596"] { flex-direction: row; align-items: center; }
+  .mobile-canvas-wide [data-node-id="278:3599"] { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-content: flex-start; padding: 48px 32px 96px; gap: 40px 20px; }
+  .mobile-canvas-wide [data-node-id="278:3600"] { width: 110px; height: 24px; }
+  .mobile-canvas-wide [data-node-id="278:3621"] { gap: 32px; }
+  .mobile-canvas-wide [data-node-id="278:3625"] { flex-basis: 100%; width: 100%; }
+  .mobile-canvas-wide [data-node-id="278:3626"] { width: 100%; height: auto; flex-direction: row; }
+  .mobile-canvas-wide [data-node-id="278:3635"] { left: 50%; top: auto; bottom: -6px; width: min(100%, 703px); transform: translateX(-50%); }
 }

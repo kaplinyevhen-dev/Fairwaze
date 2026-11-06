@@ -56,6 +56,7 @@ export default function Section278_2994() {
           </div>
         </div>
         <div className="content-stretch flex gap-[20px] items-center relative shrink-0" data-node-id="278:3030" data-name="Hero Buttons">
+          <div className="hero-primary-with-caption relative shrink-0">
           <div className="bg-[var(--text\/primary,#262626)] content-stretch drop-shadow-[0px_3px_3px_rgba(0,0,0,0.2)] flex gap-[12px] h-[44px] items-center justify-center pl-[24px] pr-[20px] py-[12px] relative rounded-[10px] shrink-0 w-[155px]" data-node-id="278:3031" data-name="Primary">
             <p className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-medium leading-[normal] relative shrink-0 text-[15px] text-[color:var(--text\/on-dark,white)] whitespace-nowrap" data-node-id="I278:3031;242:54">
               Get started
@@ -66,14 +67,15 @@ export default function Section278_2994() {
               </div>
             </div>
           </div>
+          <div className="hero-primary-caption [word-break:break-word] absolute font-['Plus_Jakarta_Sans'] font-normal text-[12px] text-[color:var(--text\/muted,#666)] text-center whitespace-nowrap" data-node-id="278:3033">
+            Transition in under a day
+          </div>
+          </div>
           <div className="bg-[rgba(38,38,38,0.05)] border border-[rgba(38,38,38,0.08)] border-solid content-stretch flex h-[44px] items-center justify-center pb-[12px] pt-[10px] px-[24px] relative rounded-[10px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0)] shrink-0" data-node-id="278:3032" data-name="Primary">
             <p className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-medium leading-[normal] relative shrink-0 text-[15px] text-[color:var(--text\/primary,#262626)] whitespace-nowrap" data-node-id="I278:3032;242:72">
               Book a demo
             </p>
           </div>
-        </div>
-        <div className="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] left-[90.5px] text-[12px] text-[color:var(--text\/muted,#666)] text-center top-[302.5px] whitespace-nowrap" data-node-id="278:3033">
-          <p className="leading-[normal]">Transition in under a day</p>
         </div>
       </div>
       <div className="hero-picture-shell hero-picture-shell-mobile h-[320px] relative shrink-0 w-full">

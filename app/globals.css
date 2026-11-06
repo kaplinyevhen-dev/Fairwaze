@@ -469,16 +469,47 @@ button, a {
   /* Figma 212:99: white 30% → 5% fill, Background blur radius 20
      (Figma's generated CSS uses blur(10px)), and two drop shadows. */
   background: linear-gradient(180deg, rgba(255, 255, 255, .30) .997%, rgba(255, 255, 255, .05) 12.751%);
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   box-shadow: 0 10px 80px rgba(10, 41, 27, .10),
     0 40px 50px rgba(10, 41, 27, .03);
 }
 
-.hero-picture-shell { clip-path: inset(-90px 0 0 0); }
+.hero-primary-caption {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: normal;
+}
+
+/* The glass shares the dashboard's artwork coordinates. This frame clips only
+   below the Hero; its extra space above keeps the existing soft glow intact. */
+.hero-glass-clip {
+  position: absolute;
+  inset: -120px 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-glass-positioner {
+  position: relative;
+  top: 120px;
+  height: 640px;
+}
+
+/* Keep the illustration cropped at its bottom, while allowing the glass
+   shadow to fade above the artwork frame. */
+.hero-picture-shell-mobile {
+  clip-path: inset(-120px 0 0 0);
+}
+.hero-picture-shell-mobile [data-node-id="278:3034"] {
+  overflow: visible;
+}
+.hero-picture-shell-mobile [data-node-id="278:3052"] {
+  width: 739px; /* 723px dashboard + 8px on each side */
+}
 
 /* Let the upper Figma shadows fade naturally while clipping the unused
-   lower portion of the 1101px artwork at the hero's original bottom edge. */
+   lower artwork, without cutting off the wider background gradient. */
 
 /* The dotted arrow pulses at rest; the hover state uses solid Figma green. */
 [data-node-id]:has(> .figma-hotspot--primary) img[src="/assets/c014f.svg"] {
