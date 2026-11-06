@@ -375,8 +375,7 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     }
     // Partition the original 15px repeating motif into four disjoint tile
     // groups. Animate only opacity: no extra triangles or moving background.
-    const patterns = [query("212:559"), ...canvas.querySelectorAll<HTMLElement>("[data-motion-pattern]")]
-      .filter((element): element is HTMLElement => Boolean(element));
+    const patterns = HTMLElement[] = [];
     for (const pattern of patterns) if (CSS.supports("mask-image", "conic-gradient(#000, transparent)")) {
       const original = pattern.style.backgroundImage;
       const style = getComputedStyle(pattern);
