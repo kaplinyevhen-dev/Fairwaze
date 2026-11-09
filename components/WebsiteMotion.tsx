@@ -14,8 +14,7 @@ const entrances: Entrance[] = [
   { ids: ["212:58", "278:3030"], y: 8, delay: 360 },
   { ids: ["212:101", "278:3054"], y: 18, delay: 120 },
   { ids: ["212:99", "278:3052"], y: 18, delay: 120 },
-  { ids: ["212:155", "278:3105"], fadeIn: true, delay: 100 },
-  { ids: ["212:152"], fadeIn: true, delay: 200 },
+  { ids: ["212:155", "278:3105", "212:152"], fadeIn: true, delay: 120 },
   { ids: ["212:190", "278:3139"], fromBottom: true, delay: 0 },
   // The central membership card is two siblings: move both by the same amount.
   { ids: ["212:192", "212:193", "278:3141", "278:3142"], fromBottom: true, delay: 650 },
@@ -58,6 +57,7 @@ const headingAnchors = ["212:176", "278:3126", "212:692", "278:3238", "212:294",
 const anchorSelector = [...cardAnchors, ...headingAnchors].map(id => `[data-node-id="${id}"]`).join(",") + ",.booking-artwork";
 const gradientDuration = 5000;
 const quickStatsCards = new Set(["212:152", "212:155", "278:3105", "212:445", "278:3589", "212:443", "278:3587"]);
+const heroStatsCards = new Set(["212:152", "212:155", "278:3105"]);
 const metricSelector = '[data-name="Statistics Row"] > div > p:first-child, [data-name="Stats"] > div > p:first-child';
 
 export default function WebsiteMotion({ root, isMobile, suspended }: {
@@ -101,8 +101,8 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     for (const spec of entrances) for (const id of spec.ids) {
       const element = query(id);
       if (!element) continue;
-      const anchor = id === "212:99" ? query("212:101") ?? element
-        : id === "278:3052" ? query("278:3054") ?? element
+      const anchor = id === "212:99" || (heroStatsCards.has(id) && id.startsWith("212:")) ? query("212:101") ?? element
+        : id === "278:3052" || heroStatsCards.has(id) ? query("278:3054") ?? element
         : element.closest<HTMLElement>(anchorSelector) ?? element;
       const group = groups.get(anchor) ?? [];
       group.push({ element, spec });
@@ -138,17 +138,16 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       // Headings move into place without opacity changes. Starting a fade
       // after text is already painted can make it flash on first scroll.
       const cardReveal = spec.fadeIn && !edge && !spec.x && !spec.y;
-      if (cardReveal) y = 34 * factor;
+      if (cardReveal) y = 16 * factor;
       const options = {
-        duration: cardReveal ? (quickStatsCards.has(element.dataset.nodeId ?? "") ? 520 : (isMobile ? 720 : 860)) : (isMobile ? 1100 : 1450), delay: spec.delay ?? 0,
-        easing: "cubic-bezier(.22,.68,.22,1)", fill: "backwards" as FillMode,
+        duration: cardReveal ? (quickStatsCards.has(element.dataset.nodeId ?? "") ? 780 : (isMobile ? 980 : 1100)) : (isMobile ? 1250 : 1500), delay: spec.delay ?? 0,
+        easing: "cubic-bezier(.25,.1,.25,1)", fill: "backwards" as FillMode,
       };
       // Scale the whole card with its existing shadow. Multi-layer artwork
       // and scrolling rows share a translation so their layers stay aligned.
-      const scale = cardReveal && spec.ids.length <= 2 && !element.dataset.marqueeDirection ? 0.955 : 1;
+      const scale = cardReveal && (spec.ids.length <= 2 || heroStatsCards.has(element.dataset.nodeId ?? "")) && !element.dataset.marqueeDirection ? 0.985 : 1;
       const movement = remember(element.animate(cardReveal ? [
         { transform: `translate3d(0,${y}px,0) scale(${scale})`, offset: 0 },
-        { transform: "translate3d(0,-3px,0) scale(1.008)", offset: 0.74 },
         { transform: "translate3d(0,0,0) scale(1)", offset: 1 },
       ] : [
         { transform: `translate3d(${x}px, ${y}px, 0)` },
@@ -162,8 +161,9 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       element.classList.remove("fw-entrance-waiting");
       movement.addEventListener("finish", () => { element.dataset.motionState = "complete"; }, { once: true });
       // Hide/leave the viewport mid-entrance: freeze rather than finishing unseen.
-      const animationAnchor = element.dataset.nodeId === "212:99" ? query("212:101") ?? element
-        : element.dataset.nodeId === "278:3052" ? query("278:3054") ?? element
+      const id = element.dataset.nodeId ?? "";
+      const animationAnchor = id === "212:99" || (heroStatsCards.has(id) && id.startsWith("212:")) ? query("212:101") ?? element
+        : id === "278:3052" || heroStatsCards.has(id) ? query("278:3054") ?? element
         : element.closest<HTMLElement>(anchorSelector) ?? element;
       const groupAnimations = entrancesInFlight.get(animationAnchor) ?? [];
       groupAnimations.push(movement);
@@ -222,38 +222,40 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
     // reading area; ambient loops only need to be on screen to resume.
     const entranceObserver = new IntersectionObserver(entries => {
       for (const entry of entries) {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.35) continue;
+        // The dashboard is intentionally cropped on narrow phones, so its
+        // visible area ratio is small even while the floating card is on screen.
+        const mobileHero = isMobile && innerWidth >= 375 && innerWidth <= 696 && entry.target === query("278:3054");
+        if (!entry.isIntersecting || entry.intersectionRatio < (mobileHero ? 0.08 : 0.35)) continue;
         if (entry.target.matches(metricSelector)) startCounter(entry.target as HTMLElement);
         else {
-          const analytics = analyticsGroups.get(entry.target as HTMLElement);
-          const shouldCount = analytics && !counted.current.has(entry.target);
-          if (shouldCount) counted.current.add(entry.target);
-          let zerosVisible = false;
-          const showZeros = () => {
-            if (disposed || !analytics || zerosVisible) return;
-            zerosVisible = true;
-            for (const counter of analytics) {
-              counter.element.textContent = counter.prefix + (0).toFixed(counter.decimals) + counter.suffix;
-              counter.element.dataset.countState = "waiting";
-              counter.show();
-            }
-          };
-          const startAnalytics = () => {
-            if (disposed || !analytics) return;
-            showZeros();
-            for (const counter of analytics) {
-              counter.element.dataset.countState = "playing";
-              counterJobs.set(counter.element, { start: performance.now() + 240, value: counter.value, prefix: counter.prefix,
-                suffix: counter.suffix, decimals: counter.decimals, visual: counter.element, finish: counter.finish });
-            }
-            if (!counterFrame) counterFrame = requestAnimationFrame(tickCounters);
-          };
-          let scheduled = false;
           for (const target of groups.get(entry.target) ?? []) {
             const appearance = reveal(target.element, target.spec);
-            if (shouldCount && appearance && target.element === entry.target) {
-              // The zero state belongs to the card's first visible frame,
-              // after its stagger delay, never to an exposed bitmap overlay.
+            const analytics = analyticsGroups.get(target.element);
+            if (!analytics || counted.current.has(target.element)) continue;
+            counted.current.add(target.element);
+            let zerosVisible = false;
+            const showZeros = () => {
+              if (disposed || zerosVisible) return;
+              zerosVisible = true;
+              for (const counter of analytics) {
+                counter.element.textContent = counter.prefix + (0).toFixed(counter.decimals) + counter.suffix;
+                counter.element.dataset.countState = "waiting";
+                counter.show();
+              }
+            };
+            const startAnalytics = () => {
+              if (disposed) return;
+              showZeros();
+              for (const counter of analytics) {
+                counter.element.dataset.countState = "playing";
+                counterJobs.set(counter.element, { start: performance.now() + 240, value: counter.value, prefix: counter.prefix,
+                  suffix: counter.suffix, decimals: counter.decimals, visual: counter.element, finish: counter.finish });
+              }
+              if (!counterFrame) counterFrame = requestAnimationFrame(tickCounters);
+            };
+            if (appearance) {
+              // Reveal the zero state with its card, then start counting when
+              // that card's entrance finishes, including any viewport pause.
               const awaitFirstFrame = () => {
                 if (disposed || zerosVisible) return;
                 if (appearance.playState === "paused" && !visible.has(entry.target)) return;
@@ -262,13 +264,9 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
                 else requestAnimationFrame(awaitFirstFrame);
               };
               requestAnimationFrame(awaitFirstFrame);
-              // Follow the actual appearance completion (including pauses),
-              // rather than starting a separate wall-clock timeout.
               appearance.addEventListener("finish", startAnalytics, { once: true });
-              scheduled = true;
-            }
+            } else startAnalytics();
           }
-          if (shouldCount && !scheduled) startAnalytics();
         }
       }
     }, { threshold: [0, 0.35], rootMargin: `-24px 0px -${Math.round(innerHeight * 0.18)}px 0px` });
