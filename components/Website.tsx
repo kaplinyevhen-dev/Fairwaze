@@ -241,9 +241,40 @@ export default function Website() {
   useHotspots(canvasRef, isMobile ? mobileHotspots : desktopHotspots, true, onAction);
   useHotspots(menuRef, menuHotspots, menuOpen, onAction);
 
+  useEffect(() => {
+    const header = canvasRef.current?.querySelector<HTMLElement>(
+      isMobile ? '[data-node-id="278:2995"]' : '[data-node-id="212:17"]',
+    );
+    if (!header?.parentElement) return;
+
+    const parent = header.parentElement;
+    const placeholder = document.createElement("div");
+    placeholder.style.cssText = `flex: none; width: ${header.offsetWidth}px; height: ${header.offsetHeight}px`;
+    parent.insertBefore(placeholder, header);
+
+    const host = document.createElement("div");
+    host.className = `sticky-header-host ${isMobile ? `mobile-canvas${wideMobile ? " mobile-canvas-wide" : ""}` : "responsive-canvas"}`;
+    const inner = document.createElement("div");
+    inner.className = "sticky-header-inner";
+    if (isMobile && !wideMobile) {
+      inner.style.width = "375px";
+      inner.style.transform = `scale(${scale})`;
+      host.style.top = `${16 * scale}px`;
+    }
+    host.appendChild(inner);
+    inner.appendChild(header);
+    document.body.appendChild(host);
+
+    return () => {
+      parent.insertBefore(header, placeholder);
+      placeholder.remove();
+      host.remove();
+    };
+  }, [isMobile, wideMobile, scale]);
+
   return (
     <>
-      <Canvas isMobile={isMobile} wideMobile={wideMobile} scale={scale} rootRef={canvasRef} hidden={menuOpen && isMobile} />
+      <Canvas isMobile={isMobile} wideMobile={wideMobile} scale={scale} rootRef={canvasRef} hidden={false} />
       <WebsiteMotion root={canvasRef} isMobile={isMobile} suspended={menuOpen || dialogLabel !== null} />
       {menuOpen && isMobile && (
         <>
@@ -252,7 +283,7 @@ export default function Website() {
             ref={menuRef}
             className="mobile-menu-sheet"
             aria-label="Mobile navigation"
-            style={{ width: 375, height: 812, left: Math.max(0, (viewport - 375 * scale) / 2), transform: `scale(${scale})` }}
+            style={{ width: "100vw", height: 328, left: 0 }}
           >
             <MobileMenuDesign />
           </nav>

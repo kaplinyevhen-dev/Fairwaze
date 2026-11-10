@@ -69,6 +69,7 @@
   .responsive-canvas [data-node-id="212:56"] { width: 100%; min-width: 0; line-height: 1.15; }
   .responsive-canvas [data-node-id="212:57"] { width: min(648px, 100%); }
   .responsive-canvas .hero-artwork { max-width: 1600px; }
+  .responsive-canvas .hero-picture-shell [data-node-id="409:658"] { width: max(2164.911px, 100vw); }
   .responsive-canvas [data-node-id="212:58"] > div { min-height: 44px; }
 
   /* Client logos wrap to a second row instead of shrinking. */
@@ -226,7 +227,10 @@
     left: 50%;
     transform: translateX(-50%);
     width: max(977px, 150vw);
-    background: url("/assets/hero-gradient-409-658.png") center / cover no-repeat;
+    bottom: 0;
+    height: auto;
+    min-height: 271.675px;
+    background: url("/assets/hero-gradient-409-658.png") center / 2302px 484px no-repeat;
   }
   .mobile-canvas-wide [data-node-id="278:3036"] { display: none; }
   .mobile-canvas-wide [data-node-id="278:3104"] { width: 100%; }
@@ -356,5 +360,41 @@
     bottom: 0;
     height: auto;
     min-height: 271.675px;
+    background: url("/assets/hero-gradient-409-658.png") center / 2302px 484px no-repeat;
+  }
+  .mobile-canvas :is([data-node-id="278:3036"], [data-node-id="278:3037"]) { display: none; }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  html { scrollbar-width: none; }
+  html::-webkit-scrollbar { display: none; }
+  .mobile-canvas :is([data-node-id="278:3039"], [data-node-id="278:3040"], [data-node-id="278:3041"], [data-node-id="278:3042"], [data-node-id="278:3043"], [data-node-id="278:3044"], [data-node-id="278:3047"], [data-node-id="278:3048"], [data-node-id="278:3050"]) { display: none; }
+}
+
+@media (min-width: 621px) and (max-width: 699px) {
+  .mobile-canvas-wide [data-node-id="278:3035"] {
+    background: url("/assets/hero-gradient-420-1809.png") center / cover no-repeat;
+  }
+  .mobile-canvas-wide [data-node-id="278:3104"] {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 537px) {
+  .mobile-canvas :is([data-node-id="278:3277"], [data-node-id="278:3596"]) {
+    width: calc(100% + 88px);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mobile-canvas :is([data-node-id="278:3278"], [data-node-id="278:3279"], [data-node-id="278:3597"], [data-node-id="278:3598"]) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 470px) and (max-width: 537px) {
+  .mobile-canvas-wide :is([data-node-id="278:3277"], [data-node-id="278:3596"]) {
+    width: calc(100% + clamp(48px, 12vw, 128px) - 40px);
   }
 }

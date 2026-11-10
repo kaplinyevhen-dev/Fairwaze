@@ -30,6 +30,7 @@ export default function ResponsiveArtwork({
         : frame.clientWidth / width;
       const x = fit === "cover" ? (frame.clientWidth - width * scale) / 2 : 0;
       const y = fit === "cover" ? (frame.clientHeight - height * scale) / 2 : 0;
+      artwork.style.setProperty("--artwork-scale", String(scale));
       artwork.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
       artwork.style.visibility = "visible";
     };

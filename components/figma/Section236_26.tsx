@@ -84,7 +84,7 @@ export default function Section236_26() {
   <div className="hero-picture-shell h-[640px] relative shrink-0 w-[1600px]">
             <div className="absolute h-[484px] left-1/2 top-[156px] -translate-x-1/2 overflow-hidden w-[2164.911px]" data-node-id="409:658" data-name="Background gradient">
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <img alt="" className="absolute h-[156.25%] left-[0.01%] max-w-none top-[-28.33%] w-[99.99%]" src={imgBackgroundGradient} />
+                <img alt="" className="absolute left-1/2 top-0 h-[484px] w-[2302px] max-w-none" style={{ transform: "translateX(-50%) scale(calc(1 / var(--artwork-scale, 1)))", transformOrigin: "center top" }} src={imgBackgroundGradient} />
               </div>
               <div className="-translate-y-1/2 absolute left-[-59.65px] size-[392px] top-[calc(50%-164.04px)] pointer-events-none" data-node-id="409:659" aria-hidden="true">
                 <div className="absolute inset-[-70.36%]">

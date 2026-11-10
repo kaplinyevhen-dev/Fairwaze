@@ -40,7 +40,7 @@ const entrances: Entrance[] = [
   // Reveal the complete cart panel, including its white backing and details.
   { ids: ["212:315", "212:316", "212:317", "212:318", "212:319",
     "278:3410", "278:3411", "278:3412", "278:3413", "278:3414"], fadeIn: true, delay: 1550 },
-  { ids: ["212:472", "278:3438"], x: 180, fadeIn: true, delay: 180 },
+  { ids: ["212:472", "278:3438"], fadeIn: true, delay: 180 },
   { ids: ["212:540", "278:3506"], fadeIn: true, delay: 650 },
   { ids: ["212:455", "278:3421"], x: 12, delay: 180 },
   { ids: ["212:460", "278:3426"], x: 12, delay: 400 },
@@ -56,7 +56,7 @@ const cardAnchors = ["212:181", "212:198", "212:226", "212:243", "278:3130", "27
 const headingAnchors = ["212:176", "278:3126", "212:692", "278:3238", "212:294", "278:3281", "212:430", "278:3577"];
 const anchorSelector = [...cardAnchors, ...headingAnchors].map(id => `[data-node-id="${id}"]`).join(",") + ",.booking-artwork";
 const gradientDuration = 5000;
-const quickStatsCards = new Set(["212:152", "212:155", "278:3105", "212:445", "278:3589", "212:443", "278:3587"]);
+const quickStatsCards = new Set(["212:152", "212:155", "278:3105", "212:472", "278:3438", "212:540", "278:3506", "212:445", "278:3589", "212:443", "278:3587"]);
 const heroStatsCards = new Set(["212:152", "212:155", "278:3105"]);
 const metricSelector = '[data-name="Statistics Row"] > div > p:first-child, [data-name="Stats"] > div > p:first-child';
 
