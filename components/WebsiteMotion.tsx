@@ -108,6 +108,14 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       group.push({ element, spec });
       groups.set(anchor, group);
       element.dataset.motionState = seen.current.has(element) ? "complete" : "waiting";
+      if (spec.y && headingAnchors.some(headingId => anchor.dataset.nodeId === headingId) && !seen.current.has(element)) {
+        element.style.setProperty("--fw-heading-entrance-y", `${spec.y * factor}px`);
+        element.classList.add("fw-heading-entrance-waiting");
+        undo.push(() => {
+          element.classList.remove("fw-heading-entrance-waiting");
+          element.style.removeProperty("--fw-heading-entrance-y");
+        });
+      }
       if ((spec.fromBottom || spec.fromEdge || spec.fadeIn) && !seen.current.has(element)) {
         // Keep decorative cards below the clipping edge until their turn.
         // The static design remains visible if JS or motion is disabled.
@@ -153,6 +161,8 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
         { transform: `translate3d(${x}px, ${y}px, 0)` },
         { transform: "translate3d(0,0,0)" },
       ], { ...options, composite: "add" }));
+      element.classList.remove("fw-heading-entrance-waiting");
+      element.style.removeProperty("--fw-heading-entrance-y");
       // During a stagger delay the entire card, including its shadow, stays
       // hidden. It becomes visible as one layer on the first animation frame.
       const visibilityGate = cardReveal ? remember(element.animate([
