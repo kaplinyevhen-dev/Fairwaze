@@ -48,7 +48,7 @@ export default function Section278_2994() {
               <p className="leading-[normal]">All-in-one venue platform</p>
             </div>
           </div>
-          <h1 className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] relative shrink-0 text-[44px] text-[color:var(--text\/primary,#262626)] text-center tracking-[-1.32px] w-[294px]" data-node-id="278:3028">
+          <h1 className="hero-heading-entrance [word-break:break-word] font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] relative shrink-0 text-[44px] text-[color:var(--text\/primary,#262626)] text-center tracking-[-1.32px] w-[294px]" data-node-id="278:3028">
             Run screen golf smarter
           </h1>
           <div className="[word-break:break-word] flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[color:var(--text\/muted,#666)] text-center w-[344px]" data-node-id="278:3029">

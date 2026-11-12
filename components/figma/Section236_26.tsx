@@ -50,7 +50,7 @@ export default function Section236_26() {
                 <p className="leading-[normal]">All-in-one venue platform</p>
               </div>
             </div>
-            <h1 className="[word-break:break-word] font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[60px] text-[color:var(--text\/primary,#262626)] text-center tracking-[-1.8px] w-[min-content]" data-node-id="212:56">
+            <h1 className="hero-heading-entrance [word-break:break-word] font-['Plus_Jakarta_Sans'] font-semibold leading-[normal] min-w-full relative shrink-0 text-[60px] text-[color:var(--text\/primary,#262626)] text-center tracking-[-1.8px] w-[min-content]" data-node-id="212:56">
               Run screen golf smarter
             </h1>
             <div className="[word-break:break-word] flex flex-col font-['Plus_Jakarta_Sans'] font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[color:var(--text\/muted,#666)] text-center w-[648px]" data-node-id="212:57">

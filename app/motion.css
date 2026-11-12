@@ -39,6 +39,15 @@
 /* JS adds this only while the decorative illustration layers await their reveal. */
 .fw-entrance-waiting { visibility: hidden; }
 .fw-heading-entrance-waiting { transform: translate3d(0, var(--fw-heading-entrance-y), 0); }
+[data-node-id="212:56"],
+[data-node-id="278:3028"] {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-heading-entrance { transform: translate3d(0, 12px, 0); }
+  .mobile-canvas .hero-heading-entrance { transform: translate3d(0, 7.2px, 0); }
+}
 
 .fw-gradient-ring {
   background: conic-gradient(from var(--fw-border-angle), #ffe41a, #35bc34, #00c2cc, #08aa89, #0897bf, #ffe41a);

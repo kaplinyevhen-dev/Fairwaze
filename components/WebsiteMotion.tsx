@@ -5,7 +5,7 @@ import type { RefObject } from "react";
 import { mountAnalyticsCounters } from "./motion/analyticsCounters";
 import type { AnalyticsCounter } from "./motion/analyticsCounters";
 
-type Entrance = { ids: string[]; x?: number; y?: number; delay?: number; fadeIn?: boolean; fromBottom?: boolean; fromEdge?: "left" | "right" | "top" | "bottom" };
+type Entrance = { ids: string[]; x?: number; y?: number; delay?: number; duration?: number; fadeIn?: boolean; fromBottom?: boolean; fromEdge?: "left" | "right" | "top" | "bottom" };
 // Verified against the existing Section*.tsx files. Never target anonymous images.
 const entrances: Entrance[] = [
   { ids: ["212:55", "278:3027"], y: 8 },
@@ -40,12 +40,12 @@ const entrances: Entrance[] = [
   // Reveal the complete cart panel, including its white backing and details.
   { ids: ["212:315", "212:316", "212:317", "212:318", "212:319",
     "278:3410", "278:3411", "278:3412", "278:3413", "278:3414"], fadeIn: true, delay: 1550 },
-  { ids: ["212:472", "278:3438"], fadeIn: true, delay: 180 },
-  { ids: ["212:540", "278:3506"], fadeIn: true, delay: 650 },
+  { ids: ["212:540", "278:3506"], fadeIn: true, delay: 120 },
+  { ids: ["212:472", "278:3438"], x: 48, fadeIn: true, delay: 340, duration: 900 },
   { ids: ["212:455", "278:3421"], x: 12, delay: 180 },
   { ids: ["212:460", "278:3426"], x: 12, delay: 400 },
   { ids: ["212:465", "278:3431"], x: 12, delay: 620 },
-  { ids: ["212:445", "278:3589"], fadeIn: true, delay: 0 },
+  { ids: ["212:445", "278:3589"], fadeIn: true, delay: 120 },
   { ids: ["212:443", "278:3587"], fadeIn: true, delay: 120 },
 ];
 
@@ -148,7 +148,7 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
       const cardReveal = spec.fadeIn && !edge && !spec.x && !spec.y;
       if (cardReveal) y = 16 * factor;
       const options = {
-        duration: cardReveal ? (quickStatsCards.has(element.dataset.nodeId ?? "") ? 780 : (isMobile ? 980 : 1100)) : (isMobile ? 1250 : 1500), delay: spec.delay ?? 0,
+        duration: spec.duration ?? (cardReveal ? (quickStatsCards.has(element.dataset.nodeId ?? "") ? 780 : (isMobile ? 980 : 1100)) : (isMobile ? 1250 : 1500)), delay: spec.delay ?? 0,
         easing: "cubic-bezier(.25,.1,.25,1)", fill: "backwards" as FillMode,
       };
       // Scale the whole card with its existing shadow. Multi-layer artwork
@@ -161,11 +161,12 @@ export default function WebsiteMotion({ root, isMobile, suspended }: {
         { transform: `translate3d(${x}px, ${y}px, 0)` },
         { transform: "translate3d(0,0,0)" },
       ], { ...options, composite: "add" }));
+      element.classList.remove("hero-heading-entrance");
       element.classList.remove("fw-heading-entrance-waiting");
       element.style.removeProperty("--fw-heading-entrance-y");
       // During a stagger delay the entire card, including its shadow, stays
       // hidden. It becomes visible as one layer on the first animation frame.
-      const visibilityGate = cardReveal ? remember(element.animate([
+      const visibilityGate = spec.fadeIn ? remember(element.animate([
         { visibility: "hidden", offset: 0 }, { visibility: "visible", offset: .001 }, { visibility: "visible", offset: 1 },
       ], options)) : null;
       element.classList.remove("fw-entrance-waiting");
